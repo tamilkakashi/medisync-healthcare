@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { handleClientMockRequest, isStaticHosting } from './clientMockDb';
 
 const api = axios.create({
     baseURL: '/api',
@@ -7,6 +8,32 @@ const api = axios.create({
         'Content-Type': 'application/json',
     },
 });
+
+// Configure adapter: If on GitHub Pages or if backend is offline, route to clientMockDb
+const defaultAdapter = axios.getAdapter(axios.defaults.adapter);
+
+api.defaults.adapter = async (config) => {
+    // If running on GitHub Pages (static site) or forced mock, serve immediately from client mock DB
+    if (isStaticHosting()) {
+        return handleClientMockRequest(config);
+    }
+
+    try {
+        return await defaultAdapter(config);
+    } catch (error) {
+        // Fall back to client mock DB if backend is offline, 404, or network error
+        const isOfflineOrNotFound = !error.response || error.response.status === 404 || error.response.status >= 500 || error.code === 'ERR_NETWORK';
+        if (isOfflineOrNotFound) {
+            console.warn('[MediSync API] Backend server unreachable or 404, falling back to Client Mock DB:', config.url);
+            try {
+                return await handleClientMockRequest(config);
+            } catch (mockError) {
+                return Promise.reject(mockError);
+            }
+        }
+        return Promise.reject(error);
+    }
+};
 
 // Request Interceptor to attach token
 api.interceptors.request.use(
@@ -26,8 +53,6 @@ api.interceptors.request.use(
 api.interceptors.response.use(
     (response) => response,
     (error) => {
-        const message = error.response?.data?.message || 'An unexpected error occurred';
-        // We can trigger toasts here if we set up a global toast system
         return Promise.reject(error);
     }
 );

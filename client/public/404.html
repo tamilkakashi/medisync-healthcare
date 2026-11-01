@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MediSync - Secure Healthcare</title>
+    <script>
+      var path = window.location.pathname;
+      var repo = '/medisync-healthcare';
+      var relative = path.startsWith(repo) ? path.slice(repo.length) : path;
+      if (relative && relative !== '/' && relative !== '') {
+        window.location.replace(repo + '/#' + relative + window.location.search + window.location.hash);
+      } else {
+        window.location.replace(repo + '/#/login');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to MediSync Healthcare...</p>
+  </body>
+</html>
