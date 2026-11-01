@@ -1,0 +1,1509 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 12669
+>>
+stream
+0.200025 w
+0 G
+0.06 0.09 0.16 rg
+0. 841.8899999999999864 595.2799999999999727 -110. re
+f
+0.02 0.59 0.41 rg
+0. 733.8899999999999864 595.2799999999999727 -4. re
+f
+BT
+/F2 22 Tf
+25.2999999999999972 TL
+1. g
+40. 799.8899999999999864 Td
+(MEDISYNC HEALTHCARE) Tj
+ET
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.204 0.827 0.6 rg
+40. 781.8899999999999864 Td
+(Cryptographically Verified Clinical & Prescription Platform) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.58 0.639 0.722 rg
+40. 763.8899999999999864 Td
+(Comprehensive Project Report • Architecture Breakdown • Interview Master Guide) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.58 0.639 0.722 rg
+40. 747.8899999999999864 Td
+(Live Demo: https://tamilkakashi.github.io/medisync-healthcare/  |  Repository: github.com/tamilkakashi/medisync-healthcare) Tj
+ET
+0.97 0.98 0.99 rg
+44. 710.8899999999999864 m
+551.2799999999999727 710.8899999999999864 l
+553.4891389993231314 710.8899999999999864 555.2799999999999727 709.0991389993231451 555.2799999999999727 706.8899999999999864 c
+555.2799999999999727 690.8899999999999864 l
+555.2799999999999727 688.6808610006768276 553.070861000676814 686.8899999999999864 551.2799999999999727 686.8899999999999864 c
+44. 686.8899999999999864 l
+41.7908610006768271 686.8899999999999864 40. 689.0991389993231451 40. 690.8899999999999864 c
+40. 706.8899999999999864 l
+40. 709.0991389993231451 42.2091389993231729 710.8899999999999864 44. 710.8899999999999864 c
+h
+f
+0.02 0.59 0.41 rg
+40. 710.8899999999999864 4. -24. re
+f
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.059 0.09 0.165 rg
+52. 694.8899999999999864 Td
+(1. Executive Overview & 60-Second Interview Pitch) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 674.8899999999999864 Td
+(When the interviewer says: "Tell me about your project", use this structured opening pitch:) Tj
+ET
+0.94 0.99 0.98 rg
+0.02 0.59 0.41 RG
+1. w
+45. 654.3899999999999864 m
+550.2799999999999727 654.3899999999999864 l
+553.041423749153978 654.3899999999999864 555.2799999999999727 652.1514237491539916 555.2799999999999727 649.3899999999999864 c
+555.2799999999999727 570.8899999999999864 l
+555.2799999999999727 568.1285762508459811 552.5185762508459675 565.8899999999999864 550.2799999999999727 565.8899999999999864 c
+45. 565.8899999999999864 l
+42.2385762508460303 565.8899999999999864 40. 568.6514237491539916 40. 570.8899999999999864 c
+40. 649.3899999999999864 l
+40. 652.1514237491539916 42.7614237491539697 654.3899999999999864 45. 654.3899999999999864 c
+h
+B
+BT
+/F2 8 Tf
+9.1999999999999993 TL
+0.02 0.588 0.412 rg
+52. 641.3899999999999864 Td
+(60-SECOND ELEVATOR PITCH) Tj
+ET
+BT
+/F3 8.5 Tf
+9.7749999999999986 TL
+0.059 0.09 0.165 rg
+52. 629.3899999999999864 Td
+("MediSync is an enterprise healthcare platform that solves prescription tampering and dispensary fraud using Public Key) Tj
+T* (Infrastructure \(PKI\). Whenever a physician prescribes medication, the payload is hashed with SHA-256 and digitally signed) Tj
+T* (with their RSA-2048 private key. Pharmacies mathematically verify the hash against the doctor's public key before) Tj
+T* (dispensing medications. It features 5 role-based portals \(Doctor, Pharmacy, Hospital, Patient, Admin\), full dark/light clinical) Tj
+T* (themes, and an offline-resilient client mock engine.") Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 555.8899999999999864 Td
+(Key Statistics & Specifications:) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 539.3899999999999864 Td
+(•  Frontend: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+100.5600000000000023 539.3899999999999864 Td
+(React 19.2, Tailwind CSS v4, Lucide React, Framer Motion, jsPDF) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 525.8899999999999864 Td
+(•  Backend Architecture: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 525.8899999999999864 Td
+(•  Backend Architecture: Node.js/Express REST API + Dual-Engine Client-Side Mock Database with Axios custom adapter) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 510.3899999999999864 Td
+(•  Security Standards: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 510.3899999999999864 Td
+(•  Security Standards: RSA-2048 Asymmetric Key Pairs, SHA-256 Digest Hashing, Role-Based Access Control \(RBAC\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 494.8899999999999864 Td
+(•  Deployment & CI/CD: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+148.9799999999999898 494.8899999999999864 Td
+(GitHub Actions workflow deploying to GitHub Pages with SPA 404 routing) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 481.3899999999999864 Td
+(•  Demo Access: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+120.3599999999999852 481.3899999999999864 Td
+(5 pre-configured 1-click role accounts \(password: 123456 across all profiles\)) Tj
+ET
+0.97 0.98 0.99 rg
+44. 471.8899999999999864 m
+551.2799999999999727 471.8899999999999864 l
+553.4891389993231314 471.8899999999999864 555.2799999999999727 470.0991389993231451 555.2799999999999727 467.8899999999999864 c
+555.2799999999999727 451.8899999999999864 l
+555.2799999999999727 449.6808610006768276 553.070861000676814 447.8899999999999864 551.2799999999999727 447.8899999999999864 c
+44. 447.8899999999999864 l
+41.7908610006768271 447.8899999999999864 40. 450.0991389993231451 40. 451.8899999999999864 c
+40. 467.8899999999999864 l
+40. 470.0991389993231451 42.2091389993231729 471.8899999999999864 44. 471.8899999999999864 c
+h
+f
+0.02 0.59 0.41 rg
+40. 471.8899999999999864 4. -24. re
+f
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.059 0.09 0.165 rg
+52. 455.8899999999999864 Td
+(2. System Architecture & The 5 Core Portals) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 431.8899999999999864 Td
+(A. Doctor Portal \(testsurgeon@lumina.sys - Dr. Marcus Vance\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 417.8899999999999864 Td
+(•  Prescription Issuance: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+154.7400000000000091 417.8899999999999864 Td
+(Structured medication builder \(drug name, dosage, frequency, duration, expiry date\).) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 404.3899999999999864 Td
+(•  Digital Signing Engine: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 404.3899999999999864 Td
+(•  Digital Signing Engine: Computes canonical SHA-256 hash and generates RSA signature stored with the prescription.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 388.8899999999999864 Td
+(•  Filter & Status Controls: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+161.8499999999999943 388.8899999999999864 Td
+(Interactive status filters \(All, Pending, Dispensed\) with real-time success rate telemetry.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 375.3899999999999864 Td
+(•  Official Medical PDF: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+147.8999999999999773 375.3899999999999864 Td
+(Exports cryptographic prescription report with QR code and physician verification proof.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 357.8899999999999864 Td
+(B. Pharmacy Portal \(testpharmacy@lumina.sys - Apex Pharmaceuticals\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 343.8899999999999864 Td
+(•  Incoming Dispatch Feed: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+165.3600000000000136 343.8899999999999864 Td
+(Live queue of pending prescriptions issued across affiliated hospitals.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 330.3899999999999864 Td
+(•  Cryptographic Integrity Verification: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 330.3899999999999864 Td
+(•  Cryptographic Integrity Verification: Validates digital signature against doctor's public key; instantly flags altered dosages.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 314.8899999999999864 Td
+(•  Dispensing Lifecycle: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+150.7800000000000296 314.8899999999999864 Td
+(1-click medication dispensing with timestamped audit trail.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 297.3899999999999864 Td
+(C. Hospital Administration Portal \(testhospital@lumina.sys - Metro Health Central\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 283.3899999999999864 Td
+(•  Practitioner Management: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+168.6899999999999977 283.3899999999999864 Td
+(Register new doctors, configure room/floor numbers, and issue cryptographic licenses.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 269.8899999999999864 Td
+(•  Patient Assignment: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+145.2900000000000205 269.8899999999999864 Td
+(Link patients directly to attending physicians with automated patient notifications.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 256.3899999999999864 Td
+(•  Dispensary Governance: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+164.1899999999999977 256.3899999999999864 Td
+(Review and approve licensed community pharmacies.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 242.8899999999999864 Td
+(•  Mobile Module Switcher: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+163.9200000000000159 242.8899999999999864 Td
+(Horizontal swipeable module pill bar for tablets and smartphones.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 225.3899999999999864 Td
+(D. Patient Portal \(testpatient@lumina.sys - Eleanor Rigby\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 211.3899999999999864 Td
+(•  Prescription Wallet: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+142.1400000000000148 211.3899999999999864 Td
+(Real-time overview of active and past medications with dosage instructions.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 197.8899999999999864 Td
+(•  Attending Physician Directory: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+189.660000000000025 197.8899999999999864 Td
+(Direct office location, department, room, and floor details.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 184.3899999999999864 Td
+(•  Notification Center: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+141.8700000000000045 184.3899999999999864 Td
+(Real-time assignment updates with centered mobile screen-fit overlay.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 166.8899999999999864 Td
+(E. Administrator Portal \(admin@medisync.com - MediSync Admin\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 152.8899999999999864 Td
+(•  User Account Approval: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+161.3100000000000023 152.8899999999999864 Td
+(Review pending staff registrations and approve credentials.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 139.3899999999999864 Td
+(•  Audit Trail Ledger: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+136.9200000000000159 139.3899999999999864 Td
+(Tamper-evident logs of every login, prescription created, verified, and dispensed.) Tj
+ET
+0.97 0.98 0.99 rg
+44. 129.8899999999999864 m
+551.2799999999999727 129.8899999999999864 l
+553.4891389993231314 129.8899999999999864 555.2799999999999727 128.0991389993231451 555.2799999999999727 125.8899999999999864 c
+555.2799999999999727 109.8899999999999864 l
+555.2799999999999727 107.6808610006768276 553.070861000676814 105.8899999999999864 551.2799999999999727 105.8899999999999864 c
+44. 105.8899999999999864 l
+41.7908610006768271 105.8899999999999864 40. 108.0991389993231451 40. 109.8899999999999864 c
+40. 125.8899999999999864 l
+40. 128.0991389993231451 42.2091389993231729 129.8899999999999864 44. 129.8899999999999864 c
+h
+f
+0.02 0.59 0.41 rg
+40. 129.8899999999999864 4. -24. re
+f
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.059 0.09 0.165 rg
+52. 113.8899999999999864 Td
+(3. Core Engineering Concepts & Technical Innovations) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 89.8899999999999864 Td
+(1. Public Key Infrastructure \(PKI\) & Digital Signatures) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 28. m
+555.2799999999999727 28. l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 16. Td
+(MediSync Healthcare — Confidential Candidate Interview Guide) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+510.2799999999999727 16. Td
+(Page 1 of 4) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 10213
+>>
+stream
+1. w
+0.02 0.59 0.41 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 801.8899999999999864 Td
+(MEDISYNC HEALTHCARE — CONFIDENTIAL TECHNICAL & INTERVIEW MASTER REPORT) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 796.8899999999999864 m
+555.2799999999999727 796.8899999999999864 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 776.8899999999999864 Td
+(Prescription data \(patientId, medicines, diagnosis, expiryDate\) is serialized and hashed with SHA-256. The hash is encrypted with) Tj
+T* (the doctor's RSA-2048 private key. The pharmacy decrypts the signature using the public key and compares it to the recomputed) Tj
+T* (hash. If even a single character was altered, the check fails.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 731.3899999999999864 Td
+(2. Dual-Engine Network Adapter \(Axios Custom Adapter\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 717.3899999999999864 Td
+(Deploying to static hosts like GitHub Pages causes /api/* endpoints to 404 because no Node server runs on the static CDN.) Tj
+T* (MediSync resolves this using an Axios adapter in api.js: when running on GitHub Pages or if the backend is down, it seamlessly) Tj
+T* (routes requests to clientMockDb.js, which manages localStorage state with full CRUD parity.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 671.8899999999999864 Td
+(3. Mobile Viewport & Touch-First Ergonomics) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 657.8899999999999864 Td
+(Engineered for real clinical mobile devices with fixed bottom navigation \(MobileBottomNav.jsx\), spring-animated slide-up drawer) Tj
+T* (\(MobileNavDrawer.jsx\), safe-area notch padding \(env\(safe-area-inset-bottom\)\), and mobile-clamped dialogs.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 624.8899999999999864 Td
+(4. Clinical Themes & HIPAA Privacy Safeguards) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 610.8899999999999864 Td
+(Includes Daylight Light, Deep Midnight Slate Dark \(#070b12\), and System Sync modes with 5 accent palettes. Features a) Tj
+T* (HIPAA-compliant Patient Privacy Screen that blurs patient names on shared terminals until explicitly hovered.) Tj
+ET
+0.97 0.98 0.99 rg
+44. 585.8899999999999864 m
+551.2799999999999727 585.8899999999999864 l
+553.4891389993231314 585.8899999999999864 555.2799999999999727 584.0991389993231451 555.2799999999999727 581.8899999999999864 c
+555.2799999999999727 565.8899999999999864 l
+555.2799999999999727 563.6808610006768276 553.070861000676814 561.8899999999999864 551.2799999999999727 561.8899999999999864 c
+44. 561.8899999999999864 l
+41.7908610006768271 561.8899999999999864 40. 564.0991389993231451 40. 565.8899999999999864 c
+40. 581.8899999999999864 l
+40. 584.0991389993231451 42.2091389993231729 585.8899999999999864 44. 585.8899999999999864 c
+h
+f
+0.02 0.59 0.41 rg
+40. 585.8899999999999864 4. -24. re
+f
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.059 0.09 0.165 rg
+52. 569.8899999999999864 Td
+(4. Real Engineering Challenges Faced & Step-by-Step Solutions) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 545.8899999999999864 Td
+(Challenge 1: GitHub Pages 404 on API Login) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 531.8899999999999864 Td
+(•  Problem: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 531.8899999999999864 Td
+(•  Problem: Localhost worked, but live GitHub Pages returned HTTP 404 on /api/auth/login because static CDN lacks a Node.js) Tj
+T* (server.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 503.8899999999999864 Td
+(•  Solution: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 503.8899999999999864 Td
+(•  Solution: Built clientMockDb.js with localStorage persistence. Wrote a custom Axios adapter in api.js that detects static) Tj
+T* (hostnames \(github.io\) and intercepts API requests without network errors.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 471.8899999999999864 Td
+(Challenge 2: Status & Date Overlap / Button Unresponsiveness) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 457.8899999999999864 Td
+(•  Problem: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 457.8899999999999864 Td
+(•  Problem: On doctor dashboard, patient names and dates were truncated, and clicking status badges did not update the view.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 442.3899999999999864 Td
+(•  Solution: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 442.3899999999999864 Td
+(•  Solution: Added min-w-[700px] table constraint with overflow-x-auto, whitespace-nowrap date protection, and converted) Tj
+T* (status badges into interactive filter toggle buttons.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 410.3899999999999864 Td
+(Challenge 3: Hospital Navigation Hidden on Mobile & Tablets) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 396.3899999999999864 Td
+(•  Problem: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+97.5900000000000034 396.3899999999999864 Td
+(Desktop sidebar had hidden xl:flex, completely removing module navigation on screens under 1280px.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 382.8899999999999864 Td
+(•  Solution: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+97.5900000000000034 382.8899999999999864 Td
+(Added a horizontal swipeable pill bar \(xl:hidden\) right below the dashboard header with active tab glow.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 365.3899999999999864 Td
+(Challenge 4: Patient Notification Dropdown Cut Off on Mobile) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 351.3899999999999864 Td
+(•  Problem: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+97.5900000000000034 351.3899999999999864 Td
+(Tapping the notification bell on mobile pushed 80% of the card off the left edge of the phone screen.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+48. 337.8899999999999864 Td
+(•  Solution: ) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+48. 337.8899999999999864 Td
+(•  Solution: Identified that absolute right-0 aligned a 288px dropdown to a 56px button on the left edge. Fixed by switching to) Tj
+T* (fixed inset-x-4 top-24 max-w-sm mx-auto with a tap-outside backdrop overlay.) Tj
+ET
+0.97 0.98 0.99 rg
+44. 313.8899999999999864 m
+551.2799999999999727 313.8899999999999864 l
+553.4891389993231314 313.8899999999999864 555.2799999999999727 312.0991389993231451 555.2799999999999727 309.8899999999999864 c
+555.2799999999999727 293.8899999999999864 l
+555.2799999999999727 291.6808610006768276 553.070861000676814 289.8899999999999864 551.2799999999999727 289.8899999999999864 c
+44. 289.8899999999999864 l
+41.7908610006768271 289.8899999999999864 40. 292.0991389993231451 40. 293.8899999999999864 c
+40. 309.8899999999999864 l
+40. 312.0991389993231451 42.2091389993231729 313.8899999999999864 44. 313.8899999999999864 c
+h
+f
+0.02 0.59 0.41 rg
+40. 313.8899999999999864 4. -24. re
+f
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.059 0.09 0.165 rg
+52. 297.8899999999999864 Td
+(5. Top 25 Interview Questions & Winning Answers) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 274.8899999999999864 m
+551.2799999999999727 274.8899999999999864 l
+553.4891389993231314 274.8899999999999864 555.2799999999999727 273.0991389993231451 555.2799999999999727 270.8899999999999864 c
+555.2799999999999727 183.8899999999999864 l
+555.2799999999999727 181.6808610006768276 553.070861000676814 179.8899999999999864 551.2799999999999727 179.8899999999999864 c
+44. 179.8899999999999864 l
+41.7908610006768271 179.8899999999999864 40. 182.0991389993231451 40. 183.8899999999999864 c
+40. 270.8899999999999864 l
+40. 273.0991389993231451 42.2091389993231729 274.8899999999999864 44. 274.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 261.8899999999999864 Td
+(Q1: Can you explain the high-level architecture of MediSync?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 244.8899999999999864 Td
+(Answer: MediSync is a single-page application built on React 19 and Tailwind CSS v4,) Tj
+T* (utilizing a dual-mode data layer: a Node/Express REST backend for full-stack) Tj
+T* (deployment and an offline-first client mock engine for static hosting. It enforces) Tj
+T* (Role-Based Access Control \(RBAC\) across 5 clinical roles and uses asymmetric) Tj
+T* (cryptography \(RSA-2048 + SHA-256\) for prescription authenticity.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 168.8899999999999864 m
+551.2799999999999727 168.8899999999999864 l
+553.4891389993231314 168.8899999999999864 555.2799999999999727 167.0991389993231451 555.2799999999999727 164.8899999999999864 c
+555.2799999999999727 101.8899999999999864 l
+555.2799999999999727 99.6808610006768276 553.070861000676814 97.8899999999999864 551.2799999999999727 97.8899999999999864 c
+44. 97.8899999999999864 l
+41.7908610006768271 97.8899999999999864 40. 100.0991389993231451 40. 101.8899999999999864 c
+40. 164.8899999999999864 l
+40. 167.0991389993231451 42.2091389993231729 168.8899999999999864 44. 168.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 155.8899999999999864 Td
+(Q2: What is the exact workflow of digital prescription signing?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 138.8899999999999864 Td
+(Answer: When a doctor creates a prescription, the core parameters are stringified and hashed with SHA-256. The hash is) Tj
+T* (encrypted with the physician’s private RSA key to produce a digital signature. At the pharmacy, the signature is decrypted using the) Tj
+T* (doctor’s public key and compared to the newly computed hash. A match guarantees integrity and non-repudiation.) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 28. m
+555.2799999999999727 28. l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 16. Td
+(MediSync Healthcare — Confidential Candidate Interview Guide) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+510.2799999999999727 16. Td
+(Page 2 of 4) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 11413
+>>
+stream
+0.75 w
+0.89 0.91 0.94 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 801.8899999999999864 Td
+(MEDISYNC HEALTHCARE — CONFIDENTIAL TECHNICAL & INTERVIEW MASTER REPORT) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 796.8899999999999864 m
+555.2799999999999727 796.8899999999999864 l
+S
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 773.8899999999999864 m
+551.2799999999999727 773.8899999999999864 l
+553.4891389993231314 773.8899999999999864 555.2799999999999727 772.0991389993231451 555.2799999999999727 769.8899999999999864 c
+555.2799999999999727 706.8899999999999864 l
+555.2799999999999727 704.6808610006768276 553.070861000676814 702.8899999999999864 551.2799999999999727 702.8899999999999864 c
+44. 702.8899999999999864 l
+41.7908610006768271 702.8899999999999864 40. 705.0991389993231451 40. 706.8899999999999864 c
+40. 769.8899999999999864 l
+40. 772.0991389993231451 42.2091389993231729 773.8899999999999864 44. 773.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 760.8899999999999864 Td
+(Q3: Why did you use HashRouter instead of BrowserRouter?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 743.8899999999999864 Td
+(Answer: On static hosts like GitHub Pages or S3, direct navigation to subpaths like /dashboard results in a 404 because no server) Tj
+T* (rewrite rule exists. HashRouter keeps navigation within hash fragments \(/#/dashboard\) handled entirely client-side, eliminating 404) Tj
+T* (errors on refresh without complex server routing.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 691.8899999999999864 m
+551.2799999999999727 691.8899999999999864 l
+553.4891389993231314 691.8899999999999864 555.2799999999999727 690.0991389993231451 555.2799999999999727 687.8899999999999864 c
+555.2799999999999727 624.8899999999999864 l
+555.2799999999999727 622.6808610006768276 553.070861000676814 620.8899999999999864 551.2799999999999727 620.8899999999999864 c
+44. 620.8899999999999864 l
+41.7908610006768271 620.8899999999999864 40. 623.0991389993231451 40. 624.8899999999999864 c
+40. 687.8899999999999864 l
+40. 690.0991389993231451 42.2091389993231729 691.8899999999999864 44. 691.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 678.8899999999999864 Td
+(Q4: How did you solve the problem of running a full-stack app on a static host like GitHub Pages?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 661.8899999999999864 Td
+(Answer: I implemented a custom Axios adapter in api.js. It checks whether the application is running on a static host like github.io.) Tj
+T* (If so, it intercepts requests and routes them to clientMockDb.js, which manages data in localStorage and reproduces the complete) Tj
+T* (server API contract, including cryptography and stats.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 609.8899999999999864 m
+551.2799999999999727 609.8899999999999864 l
+553.4891389993231314 609.8899999999999864 555.2799999999999727 608.0991389993231451 555.2799999999999727 605.8899999999999864 c
+555.2799999999999727 542.8899999999999864 l
+555.2799999999999727 540.6808610006768276 553.070861000676814 538.8899999999999864 551.2799999999999727 538.8899999999999864 c
+44. 538.8899999999999864 l
+41.7908610006768271 538.8899999999999864 40. 541.0991389993231451 40. 542.8899999999999864 c
+40. 605.8899999999999864 l
+40. 608.0991389993231451 42.2091389993231729 609.8899999999999864 44. 609.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 596.8899999999999864 Td
+(Q5: What makes your project mobile-ready?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 579.8899999999999864 Td
+(Answer: I implemented touch-first navigation including a fixed bottom navigation bar \(MobileBottomNav.jsx\) on screens < 768px, a) Tj
+T* (slide-up gesture-friendly drawer \(MobileNavDrawer.jsx\), safe-area notch padding \(env\(safe-area-inset-bottom\)\), and responsive) Tj
+T* (table swipe indicators.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 527.8899999999999864 m
+551.2799999999999727 527.8899999999999864 l
+553.4891389993231314 527.8899999999999864 555.2799999999999727 526.0991389993231451 555.2799999999999727 523.8899999999999864 c
+555.2799999999999727 460.8899999999999864 l
+555.2799999999999727 458.6808610006768276 553.070861000676814 456.8899999999999864 551.2799999999999727 456.8899999999999864 c
+44. 456.8899999999999864 l
+41.7908610006768271 456.8899999999999864 40. 459.0991389993231451 40. 460.8899999999999864 c
+40. 523.8899999999999864 l
+40. 526.0991389993231451 42.2091389993231729 527.8899999999999864 44. 527.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 514.8899999999999864 Td
+(Q6: Tell me about a specific CSS positioning bug you solved.) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 497.8899999999999864 Td
+(Answer: In the Patient Dashboard, the notification dropdown used absolute right-0 w-72. On mobile, the bell icon sat on the left of) Tj
+T* (the screen, so aligning the right edge of a 288px box to a 56px button pushed 232px off-screen to the left. I replaced it on mobile) Tj
+T* (with fixed inset-x-4 top-24 max-w-sm mx-auto and a backdrop overlay.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 445.8899999999999864 m
+551.2799999999999727 445.8899999999999864 l
+553.4891389993231314 445.8899999999999864 555.2799999999999727 444.0991389993231451 555.2799999999999727 441.8899999999999864 c
+555.2799999999999727 378.8899999999999864 l
+555.2799999999999727 376.6808610006768276 553.070861000676814 374.8899999999999864 551.2799999999999727 374.8899999999999864 c
+44. 374.8899999999999864 l
+41.7908610006768271 374.8899999999999864 40. 377.0991389993231451 40. 378.8899999999999864 c
+40. 441.8899999999999864 l
+40. 444.0991389993231451 42.2091389993231729 445.8899999999999864 44. 445.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 432.8899999999999864 Td
+(Q7: How does your theme engine work?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 415.8899999999999864 Td
+(Answer: It uses React Context \(ThemeContext\) and localStorage to manage Light, Dark, and System modes. In System mode, it) Tj
+T* (listens to window.matchMedia for OS dark mode changes. It injects classes on the html root along with custom data-accent,) Tj
+T* (data-compact, and data-font-size attributes for instant variable re-computation.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 363.8899999999999864 m
+551.2799999999999727 363.8899999999999864 l
+553.4891389993231314 363.8899999999999864 555.2799999999999727 362.0991389993231451 555.2799999999999727 359.8899999999999864 c
+555.2799999999999727 308.8899999999999864 l
+555.2799999999999727 306.6808610006768276 553.070861000676814 304.8899999999999864 551.2799999999999727 304.8899999999999864 c
+44. 304.8899999999999864 l
+41.7908610006768271 304.8899999999999864 40. 307.0991389993231451 40. 308.8899999999999864 c
+40. 359.8899999999999864 l
+40. 362.0991389993231451 42.2091389993231729 363.8899999999999864 44. 363.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 350.8899999999999864 Td
+(Q8: How do you ensure HIPAA privacy on clinical terminals?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 333.8899999999999864 Td
+(Answer: We built a Patient Privacy Screen feature. When enabled in System Settings, patient names are blurred using CSS) Tj
+T* (backdrop filter on shared hospital terminals and only reveal when explicitly hovered by clinical staff.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 293.8899999999999864 m
+551.2799999999999727 293.8899999999999864 l
+553.4891389993231314 293.8899999999999864 555.2799999999999727 292.0991389993231451 555.2799999999999727 289.8899999999999864 c
+555.2799999999999727 226.8899999999999864 l
+555.2799999999999727 224.6808610006768276 553.070861000676814 222.8899999999999864 551.2799999999999727 222.8899999999999864 c
+44. 222.8899999999999864 l
+41.7908610006768271 222.8899999999999864 40. 225.0991389993231451 40. 226.8899999999999864 c
+40. 289.8899999999999864 l
+40. 292.0991389993231451 42.2091389993231729 293.8899999999999864 44. 293.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 280.8899999999999864 Td
+(Q9: What is the difference between asymmetric and symmetric encryption?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 263.8899999999999864 Td
+(Answer: Symmetric encryption uses the same key for both encryption and decryption \(e.g. AES\). Asymmetric encryption uses a) Tj
+T* (mathematically linked pair: a public key for encryption/verification and a private key for decryption/signing \(e.g. RSA\). We use) Tj
+T* (asymmetric keys for non-repudiation.) Tj
+ET
+0.98 0.98 0.99 rg
+0.89 0.91 0.94 RG
+0.75 w
+44. 211.8899999999999864 m
+551.2799999999999727 211.8899999999999864 l
+553.4891389993231314 211.8899999999999864 555.2799999999999727 210.0991389993231451 555.2799999999999727 207.8899999999999864 c
+555.2799999999999727 156.8899999999999864 l
+555.2799999999999727 154.6808610006768276 553.070861000676814 152.8899999999999864 551.2799999999999727 152.8899999999999864 c
+44. 152.8899999999999864 l
+41.7908610006768271 152.8899999999999864 40. 155.0991389993231451 40. 156.8899999999999864 c
+40. 207.8899999999999864 l
+40. 210.0991389993231451 42.2091389993231729 211.8899999999999864 44. 211.8899999999999864 c
+h
+B
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.059 0.09 0.165 rg
+50. 198.8899999999999864 Td
+(Q10: How do you protect against SQL / NoSQL injection and credential exposure?) Tj
+ET
+BT
+/F1 8.5 Tf
+9.7749999999999986 TL
+0.2 0.255 0.333 rg
+50. 181.8899999999999864 Td
+(Answer: We sanitize all inputs, use strict Mongoose schema validation, never commit .env files or tokens to git, hash passwords) Tj
+T* (using bcrypt with 10 salt rounds, and strip private keys from all user responses.) Tj
+ET
+0.97 0.98 0.99 rg
+44. 148.8899999999999864 m
+551.2799999999999727 148.8899999999999864 l
+553.4891389993231314 148.8899999999999864 555.2799999999999727 147.0991389993231451 555.2799999999999727 144.8899999999999864 c
+555.2799999999999727 128.8899999999999864 l
+555.2799999999999727 126.6808610006768276 553.070861000676814 124.8899999999999864 551.2799999999999727 124.8899999999999864 c
+44. 124.8899999999999864 l
+41.7908610006768271 124.8899999999999864 40. 127.0991389993231451 40. 128.8899999999999864 c
+40. 144.8899999999999864 l
+40. 147.0991389993231451 42.2091389993231729 148.8899999999999864 44. 148.8899999999999864 c
+h
+f
+0.02 0.59 0.41 rg
+40. 148.8899999999999864 4. -24. re
+f
+BT
+/F2 12 Tf
+13.7999999999999989 TL
+0.059 0.09 0.165 rg
+52. 132.8899999999999864 Td
+(6. Step-by-Step 3-Minute Live Demo Script) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 108.8899999999999864 Td
+(Phase 1: Login & Role Selection \(30 seconds\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 94.8899999999999864 Td
+(Open https://tamilkakashi.github.io/medisync-healthcare/ and point out the 1-Click Demo Profiles. Click Doctor \(Dr. Marcus) Tj
+T* (Vance\).) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 28. m
+555.2799999999999727 28. l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 16. Td
+(MediSync Healthcare — Confidential Candidate Interview Guide) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+510.2799999999999727 16. Td
+(Page 3 of 4) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 1948
+>>
+stream
+0.75 w
+0.89 0.91 0.94 RG
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 801.8899999999999864 Td
+(MEDISYNC HEALTHCARE — CONFIDENTIAL TECHNICAL & INTERVIEW MASTER REPORT) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 796.8899999999999864 m
+555.2799999999999727 796.8899999999999864 l
+S
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 772.8899999999999864 Td
+(Phase 2: Doctor Prescription Creation \(60 seconds\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 758.8899999999999864 Td
+(Click "New Prescription", select Eleanor Rigby, add Lisinopril 10mg, and click "Issue Prescription & Sign". Explain SHA-256 hash) Tj
+T* (generation and RSA private key signing. Click the prescription row to show the official medical layout with cryptographic proofs.) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 725.8899999999999864 Td
+(Phase 3: Pharmacy Verification & Dispense \(45 seconds\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 711.8899999999999864 Td
+(Log out, click Pharmacy \(Apex Pharmaceuticals\), open the pending prescription, highlight the "Digital Signature Verified" badge,) Tj
+T* (and click "Dispense Medication".) Tj
+ET
+BT
+/F2 10.5 Tf
+12.0749999999999993 TL
+0.118 0.227 0.541 rg
+40. 678.8899999999999864 Td
+(Phase 4: Patient View & Mobile Controls \(45 seconds\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+40. 664.8899999999999864 Td
+(Log in as Patient \(Eleanor Rigby\), show the status updated to Dispensed, tap the notification bell to show the centered notification) Tj
+T* (modal, and toggle Dark Mode to demonstrate clinical contrast.) Tj
+ET
+0.89 0.91 0.94 RG
+0.5 w
+40. 28. m
+555.2799999999999727 28. l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+40. 16. Td
+(MediSync Healthcare — Confidential Candidate Interview Guide) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.392 0.455 0.545 rg
+510.2799999999999727 16. Td
+(Page 4 of 4) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+25 0 obj
+<<
+/Producer (jsPDF 4.0.0)
+/CreationDate (D:20261101171849+05'30')
+>>
+endobj
+26 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000037019 00000 n 
+0000038859 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000012874 00000 n 
+0000013011 00000 n 
+0000023277 00000 n 
+0000023414 00000 n 
+0000034880 00000 n 
+0000035018 00000 n 
+0000037094 00000 n 
+0000037220 00000 n 
+0000037351 00000 n 
+0000037485 00000 n 
+0000037623 00000 n 
+0000037747 00000 n 
+0000037876 00000 n 
+0000038008 00000 n 
+0000038144 00000 n 
+0000038272 00000 n 
+0000038399 00000 n 
+0000038528 00000 n 
+0000038661 00000 n 
+0000038763 00000 n 
+0000039112 00000 n 
+0000039198 00000 n 
+trailer
+<<
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <A0906F996157E027998D8DEAF7FCE6AD> <A0906F996157E027998D8DEAF7FCE6AD> ]
+>>
+startxref
+39302
+%%EOF

@@ -8,6 +8,7 @@
 
 > 🌐 **Live Web Application**: **[https://tamilkakashi.github.io/medisync-healthcare/](https://tamilkakashi.github.io/medisync-healthcare/)**  
 > 🔗 **GitHub Repository**: **[https://github.com/tamilkakashi/medisync-healthcare](https://github.com/tamilkakashi/medisync-healthcare)**  
+> 📄 **Technical & Interview PDF Report**: **[MediSync_Interview_Master_Report.pdf](MediSync_Interview_Master_Report.pdf)**  
 > Experience real-time role-based portals (Doctor, Pharmacy, Hospital, Patient, Admin) with instant dark/light themes and cryptographic verification.
 
 ---
