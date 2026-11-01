@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediSync — Executive & Technical Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --bg-card: rgba(18, 26, 44, 0.75);
+      --bg-card-hover: rgba(28, 40, 66, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --accent-teal: #10b981;
+      --accent-teal-glow: rgba(16, 185, 129, 0.25);
+      --accent-blue: #3b82f6;
+      --accent-indigo: #6366f1;
+      --accent-cyan: #06b6d4;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #cbd5e1;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* Presentation Layout */
+    .deck-container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Nav Header */
+    .deck-header {
+      height: 64px;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(9, 13, 22, 0.9);
+      backdrop-filter: blur(12px);
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 16px var(--accent-teal-glow);
+    }
+
+    .slide-counter {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.05);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-nav {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-nav:hover {
+      background: var(--accent-teal);
+      color: #000;
+      border-color: var(--accent-teal);
+      box-shadow: 0 0 15px var(--accent-teal-glow);
+    }
+    .btn-pdf {
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      color: #000;
+      border: none;
+      font-weight: 700;
+    }
+
+    /* Print Styles */
+    @media print {
+      @page {
+        size: 16in 9in;
+        margin: 0;
+      }
+      body {
+        overflow: visible !important;
+        height: auto !important;
+        background-color: #090d16 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .deck-header, .deck-footer, .controls {
+        display: none !important;
+      }
+      .deck-container {
+        height: auto !important;
+        display: block !important;
+      }
+      .slide-stage {
+        position: static !important;
+        overflow: visible !important;
+      }
+      .slide {
+        position: relative !important;
+        inset: auto !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        padding: 60px 80px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+      }
+    }
+
+    /* Slide Stage */
+    .slide-stage {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      padding: 30px 60px;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+    .slide.active {
+      display: flex;
+      animation: fadeInSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeInSlide {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Typography & Components */
+    .slide-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-teal);
+      margin-bottom: 8px;
+    }
+    .slide-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--text-muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Grid Layouts */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      transition: all 0.25s ease;
+    }
+    .card:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-teal);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .screenshot-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      background: #000;
+    }
+    .screenshot-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Workflow & Diagram Boxes */
+    .flow-node {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    /* Bottom Bar */
+    .deck-footer {
+      height: 48px;
+      padding: 0 32px;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(9, 13, 22, 0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="deck-container">
+    <header class="deck-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <span>MEDISYNC</span>
+      </div>
+      <div class="slide-counter" id="slideNum">Slide 1 / 20</div>
+      <div class="controls">
+        <button class="btn-nav btn-pdf" onclick="window.print()">🖨️ Export PDF</button>
+        <button class="btn-nav" onclick="prevSlide()">← Prev</button>
+        <button class="btn-nav" onclick="nextSlide()">Next →</button>
+      </div>
+    </header>
+
+    <main class="slide-stage" id="stage">
+
+      <!-- Slide 1: TITLE -->
+      <div class="slide active">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <div class="badge" style="margin-bottom: 16px;">Healthcare Innovation & Synchronization Platform</div>
+          <h1 style="font-family: var(--font-heading); font-size: 3.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(135deg, #fff 30%, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            MediSync System
+          </h1>
+          <p style="font-size: 1.25rem; color: var(--text-sub); margin-bottom: 40px; font-weight: 400;">
+            Secure Hospital-to-Pharmacy Synchronization System
+          </p>
+          <div class="grid-3" style="max-width: 800px; margin: 0 auto 40px auto; text-align: left;">
+            <div class="card">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Presenter</div>
+              <div style="font-weight: 700; color: #fff; margin-top: 4px;">Tamilarasan</div>
+            </div>
+            <div class="card">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Role</div>
+              <div style="font-weight: 700; color: #fff; margin-top: 4px;">Full-Stack Developer</div>
+            </div>
+            <div class="card">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Institution</div>
+              <div style="font-weight: 700; color: #fff; margin-top: 4px;">[Institution / Company Name]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: PROJECT OVERVIEW -->
+      <div class="slide">
+        <div class="slide-tag">Executive Summary</div>
+        <h2 class="slide-title">Project Overview</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="color: var(--accent-teal); margin-bottom: 12px; font-size: 1.2rem;">What MediSync Is</h3>
+            <p style="color: var(--text-sub); line-height: 1.6; font-size: 0.95rem;">
+              MediSync is a web-based healthcare coordination platform that connects hospitals, doctors, patients, and pharmacies through a centralized digital prescription workflow.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--accent-teal); margin-bottom: 12px; font-size: 1.2rem;">Core Value Drivers</h3>
+            <ul style="color: var(--text-sub); line-height: 1.8; padding-left: 20px; font-size: 0.95rem;">
+              <li>Digital prescription transmission from doctors to verified pharmacies.</li>
+              <li>Digital prescription verification using QR-based validation.</li>
+              <li>Centralized patient medical history and PDF export.</li>
+              <li>System audit logging for operational transparency and governance.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: PROBLEM STATEMENT -->
+      <div class="slide">
+        <div class="slide-tag">Healthcare Gaps</div>
+        <h2 class="slide-title">Problem Statement</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="badge" style="background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);">Gap 01</div>
+            <h3 style="margin: 12px 0 8px 0;">Paper Prescription Risks</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Traditional handwritten and printed prescriptions can increase the risk of alteration, duplication, and dispensing errors.</p>
+          </div>
+          <div class="card">
+            <div class="badge" style="background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);">Gap 02</div>
+            <h3 style="margin: 12px 0 8px 0;">Fragmented Pharmacy Workflows</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Manual verification between pharmacies and prescribing providers can introduce delays and operational bottlenecks.</p>
+          </div>
+          <div class="card">
+            <div class="badge" style="background: rgba(239,68,68,0.15); color: #ef4444; border-color: rgba(239,68,68,0.3);">Gap 03</div>
+            <h3 style="margin: 12px 0 8px 0;">Fragmented Patient Records</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Patients may lack convenient access to centralized digital records of prescriptions, medications, and prescribing information.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: PROPOSED SOLUTION -->
+      <div class="slide">
+        <div class="slide-tag">The Innovation</div>
+        <h2 class="slide-title">Proposed Solution</h2>
+        <div class="grid-3">
+          <div class="card" style="text-align: center; border-color: rgba(239,68,68,0.4);">
+            <div style="font-size: 0.8rem; color: #ef4444; font-weight: 700; text-transform: uppercase;">1. Problem</div>
+            <div style="font-weight: 700; font-size: 1.1rem; margin: 8px 0;">Manual & Vulnerable</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Paper prescription delays, error-prone dispensing, unverified pharmacy interactions.</p>
+          </div>
+          <div class="card" style="text-align: center; border-color: rgba(59,130,246,0.4);">
+            <div style="font-size: 0.8rem; color: #3b82f6; font-weight: 700; text-transform: uppercase;">2. Solution</div>
+            <div style="font-weight: 700; font-size: 1.1rem; margin: 8px 0;">MediSync Platform</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Role-based authentication, digital prescription transmission, QR-based verification, and centralized record management.</p>
+          </div>
+          <div class="card" style="text-align: center; border-color: rgba(16,185,129,0.4);">
+            <div style="font-size: 0.8rem; color: #10b981; font-weight: 700; text-transform: uppercase;">3. Outcome</div>
+            <div style="font-weight: 700; font-size: 1.1rem; margin: 8px 0;">Verified Digital Workflow</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Fast digital prescription workflow, audit traceability, traceable and verifiable prescription lifecycle.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5: OBJECTIVES -->
+      <div class="slide">
+        <div class="slide-tag">Strategic Alignment</div>
+        <h2 class="slide-title">Core System Objectives</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">1. Fast Digital Prescription Sync</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Deliver prescriptions to verified pharmacies through a fast digital workflow.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">2. Role-Based Access Control</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Enforce role-based access controls across Admin, Hospital, Doctor, Pharmacy, and Patient portals.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">3. Application Security</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Implement JWT-based authentication, password hashing, rate limiting, and request validation.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">4. Verification Governance</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Implement mandatory Admin approval queues for new Hospital and Pharmacy registrants.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">5. Audit Logging</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Maintain system audit trails for prescription generation, link requests, and dispensing events.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">6. Digital Health PDF Exports</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 6px;">Generate downloadable, standardized prescription documents for offline access and record keeping.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 6: TARGET USERS -->
+      <div class="slide">
+        <div class="slide-tag">User Ecology</div>
+        <h2 class="slide-title">Multi-Role User Personas</h2>
+        <div class="grid-4">
+          <div class="card">
+            <div class="badge">Role 1</div>
+            <h3 style="margin: 8px 0;">System Admin</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Oversees platform governance, approves hospital & pharmacy accounts, monitors system audit logs.</p>
+          </div>
+          <div class="card">
+            <div class="badge">Role 2</div>
+            <h3 style="margin: 8px 0;">Doctor</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Creates digital prescriptions, links patient records, assigns consulting rooms and medical instructions.</p>
+          </div>
+          <div class="card">
+            <div class="badge">Role 3</div>
+            <h3 style="margin: 8px 0;">Pharmacy Staff</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Accesses pending prescription queues, verifies dosage details, and marks prescriptions as DISPENSED.</p>
+          </div>
+          <div class="card">
+            <div class="badge">Role 4</div>
+            <h3 style="margin: 8px 0;">Patient</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Views assigned doctor details, tracks prescription status, downloads PDF records, scans QR verification.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 7: KEY FEATURES -->
+      <div class="slide">
+        <div class="slide-tag">Capabilities</div>
+        <h2 class="slide-title">Implemented Core Features</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h4 style="color: #fff;">Digital Prescription Engine</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Dynamic medicine addition with dosage, frequency, and duration tracking.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: #fff;">Near-Real-Time Status Synchronization</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Prescription status changes are reflected across relevant views through API synchronization.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: #fff;">QR-Based Verification & PDF Generation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Built-in QR code generator and client-side jsPDF document compilation.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: #fff;">Hospital-Patient Linking</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Patient linkage mechanism establishing provider-patient care relationship.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: #fff;">Admin Approval System</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Account authorization requirement preventing unverified entities from issuing medications.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: #fff;">Audit Trail & System Monitoring</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Automated system audit logs recording action type, target user, timestamp, and metadata.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 8: SYSTEM WORKFLOW -->
+      <div class="slide">
+        <div class="slide-tag">Process Flow</div>
+        <h2 class="slide-title">End-to-End System Workflow</h2>
+        <div class="grid-4" style="align-items: center;">
+          <div class="card flow-node">
+            <div class="badge">Step 1</div>
+            <h4 style="margin: 8px 0;">Consultation</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Doctor creates digital prescription in Doctor Portal.</p>
+          </div>
+          <div class="card flow-node">
+            <div class="badge">Step 2</div>
+            <h4 style="margin: 8px 0;">API Processing</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Express API validates the request, stores the prescription, and records the corresponding audit event.</p>
+          </div>
+          <div class="card flow-node">
+            <div class="badge">Step 3</div>
+            <h4 style="margin: 8px 0;">Pharmacy Queue</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Prescription appears in near-real-time on Pharmacy Queue.</p>
+          </div>
+          <div class="card flow-node">
+            <div class="badge">Step 4</div>
+            <h4 style="margin: 8px 0;">Fulfillment</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">Pharmacy dispenses medication; status updates to DISPENSED across relevant views.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 9: TECHNOLOGY STACK -->
+      <div class="slide">
+        <div class="slide-tag">Engineering</div>
+        <h2 class="slide-title">Technology Stack</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3 style="color: var(--accent-blue); margin-bottom: 12px;">Frontend Tier</h3>
+            <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.6;">
+              • <strong>React 19 & Vite 7</strong><br>
+              • <strong>Tailwind CSS v4</strong><br>
+              • <strong>Framer Motion 12</strong><br>
+              • <strong>Lucide React & jsPDF 4</strong>
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--accent-teal); margin-bottom: 12px;">Backend Tier</h3>
+            <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.6;">
+              • <strong>Node.js & Express 5</strong><br>
+              • <strong>JWT & Cookie Parser</strong><br>
+              • <strong>BcryptJS 3 Password Hashing</strong><br>
+              • <strong>Express Rate Limit 8</strong>
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--accent-cyan); margin-bottom: 12px;">Database & Services</h3>
+            <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.6;">
+              • <strong>MongoDB Atlas (Mongoose 9)</strong><br>
+              • <strong>Nodemailer 8 Notification Service</strong><br>
+              • <strong>Axios HTTP Client</strong><br>
+              • <strong>QRCode React 4 Component</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 10: SYSTEM ARCHITECTURE -->
+      <div class="slide">
+        <div class="slide-tag">System Topology</div>
+        <h2 class="slide-title">System Architecture</h2>
+        <div class="card" style="padding: 32px; text-align: center;">
+          <div style="display: flex; justify-content: space-around; align-items: center;">
+            <div style="background: rgba(59,130,246,0.15); border: 1px solid #3b82f6; padding: 20px; border-radius: 12px; width: 220px;">
+              <h4 style="color: #3b82f6;">React Frontend</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">React 19 SPA + Vite + Tailwind</p>
+            </div>
+            <div style="color: var(--accent-teal); font-size: 1.5rem; font-weight: 800;">→ HTTP/REST →</div>
+            <div style="background: rgba(16,185,129,0.15); border: 1px solid #10b981; padding: 20px; border-radius: 12px; width: 240px;">
+              <h4 style="color: #10b981;">Express REST API / Backend</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">JWT Authentication Middleware & Controllers</p>
+            </div>
+            <div style="color: var(--accent-teal); font-size: 1.5rem; font-weight: 800;">→ Mongoose →</div>
+            <div style="background: rgba(6,182,212,0.15); border: 1px solid #06b6d4; padding: 20px; border-radius: 12px; width: 220px;">
+              <h4 style="color: #06b6d4;">MongoDB Atlas</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Collections: Users, Prescriptions, Audits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 11: DATABASE / DATA FLOW -->
+      <div class="slide">
+        <div class="slide-tag">Data Architecture</div>
+        <h2 class="slide-title">Data Schema & Entity Relationships</h2>
+        <div class="grid-3" style="margin-bottom: 20px;">
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">User Schema</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">email, passwordHash, role, isApproved, hospitalDetails (licenseNumber, roomNumber, floorNumber), assignedDoctor.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">Prescription Schema</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">patientId, patientName, doctorId, doctorEmail, medicines [name, dosage, frequency, duration], status (pending/dispensed).</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">AuditLog Schema</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">action, performedBy, targetUser, description, timestamp.</p>
+          </div>
+        </div>
+        <div class="card" style="text-align: center; padding: 16px;">
+          <div style="font-size: 0.85rem; color: var(--accent-teal); font-weight: 700;">Entity Relationships</div>
+          <div style="font-size: 0.95rem; color: #fff; margin-top: 4px; font-weight: 600;">
+            User (Doctor / Patient / Pharmacy) &nbsp;→&nbsp; Prescription &nbsp;→&nbsp; Medicine &nbsp;&nbsp;|&nbsp;&nbsp; User &nbsp;→&nbsp; AuditLog
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 12: USER INTERFACE -->
+      <div class="slide">
+        <div class="slide-tag">Visual Verification</div>
+        <h2 class="slide-title">Doctor & Hospital Interface</h2>
+        <div class="grid-2" style="align-items: center;">
+          <div class="screenshot-frame">
+            <img src="/assets/presentation/doctor_dashboard.png" alt="Doctor Dashboard" />
+          </div>
+          <div class="card">
+            <h3 style="color: var(--accent-teal); margin-bottom: 12px;">Doctor Portal Highlights</h3>
+            <ul style="color: var(--text-sub); line-height: 1.8; font-size: 0.9rem; padding-left: 20px;">
+              <li>Prescription creation modal with dynamic medication lists.</li>
+              <li>Metrics panel tracking total issued vs. pending prescriptions.</li>
+              <li>Connection and system status indicators.</li>
+              <li>Direct room assignment and hospital communication status.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 13: ADMIN DASHBOARD -->
+      <div class="slide">
+        <div class="slide-tag">Governance</div>
+        <h2 class="slide-title">Admin Dashboard & Operations</h2>
+        <div class="grid-2" style="align-items: center;">
+          <div class="card">
+            <h3 style="color: var(--accent-teal); margin-bottom: 12px;">Platform Control & Governance</h3>
+            <ul style="color: var(--text-sub); line-height: 1.8; font-size: 0.9rem; padding-left: 20px;">
+              <li>User verification queue for newly registered hospitals and pharmacies.</li>
+              <li>Platform Audit Log displaying system actions with user attribution.</li>
+              <li>Platform health indicators and operational metrics.</li>
+              <li>Global entity management and permission revocation controls.</li>
+            </ul>
+          </div>
+          <div class="screenshot-frame">
+            <img src="/assets/presentation/admin_dashboard.png" alt="Admin Dashboard" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 14: SECURITY -->
+      <div class="slide">
+        <div class="slide-tag">Data Protection</div>
+        <h2 class="slide-title">Application Security Measures</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">HTTP-Only Cookie Auth</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">HTTP-only cookies reduce client-side JavaScript access to authentication tokens and help mitigate token theft through certain XSS scenarios.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">BcryptJS Password Hashing</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Passwords are hashed using bcryptjs before storage in the database.</p>
+          </div>
+          <div class="card">
+            <h4 style="color: var(--accent-teal);">Rate Limiting & Validation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Rate limiting helps protect authentication endpoints against repeated or brute-force login attempts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 15: TESTING -->
+      <div class="slide">
+        <div class="slide-tag">Quality Assurance</div>
+        <h2 class="slide-title">Functional / Manual Testing</h2>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+            <thead>
+              <tr style="background: rgba(255,255,255,0.05); color: var(--accent-teal);">
+                <th style="padding: 14px 20px;">Test Module</th>
+                <th style="padding: 14px 20px;">Scope / Expected Result</th>
+                <th style="padding: 14px 20px;">Actual Result</th>
+                <th style="padding: 14px 20px;">Status</th>
+              </tr>
+            </thead>
+            <tbody style="color: var(--text-sub);">
+              <tr style="border-top: 1px solid var(--border-color);">
+                <td style="padding: 12px 20px;">Authentication</td>
+                <td style="padding: 12px 20px;">Correct role-based access</td>
+                <td style="padding: 12px 20px;">Verified</td>
+                <td style="padding: 12px 20px;"><span class="badge">PASS</span></td>
+              </tr>
+              <tr style="border-top: 1px solid var(--border-color);">
+                <td style="padding: 12px 20px;">Prescription Creation</td>
+                <td style="padding: 12px 20px;">Prescription stored successfully</td>
+                <td style="padding: 12px 20px;">Verified</td>
+                <td style="padding: 12px 20px;"><span class="badge">PASS</span></td>
+              </tr>
+              <tr style="border-top: 1px solid var(--border-color);">
+                <td style="padding: 12px 20px;">Dispensing Workflow</td>
+                <td style="padding: 12px 20px;">Status changes correctly</td>
+                <td style="padding: 12px 20px;">Verified</td>
+                <td style="padding: 12px 20px;"><span class="badge">PASS</span></td>
+              </tr>
+              <tr style="border-top: 1px solid var(--border-color);">
+                <td style="padding: 12px 20px;">PDF Export</td>
+                <td style="padding: 12px 20px;">PDF generated successfully</td>
+                <td style="padding: 12px 20px;">Verified</td>
+                <td style="padding: 12px 20px;"><span class="badge">PASS</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Slide 16: RESULTS / CURRENT STATUS -->
+      <div class="slide">
+        <div class="slide-tag">Deployment Status</div>
+        <h2 class="slide-title">Results & Platform Status</h2>
+        <div class="grid-2" style="align-items: center;">
+          <div class="screenshot-frame">
+            <img src="/assets/presentation/pharmacy_dashboard.png" alt="Pharmacy Queue" />
+          </div>
+          <div class="card">
+            <h3 style="color: var(--accent-teal); margin-bottom: 12px;">Verified Achievements</h3>
+            <ul style="color: var(--text-sub); line-height: 1.8; font-size: 0.9rem; padding-left: 20px;">
+              <li>Functional multi-role platform (Admin, Doctor, Pharmacy, Patient).</li>
+              <li>Near-real-time prescription queue synchronization between doctors and pharmacies.</li>
+              <li>Verified database persistence with MongoDB Atlas cloud connectivity.</li>
+              <li>End-to-end dispensing workflow completed successfully during functional testing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 17: CHALLENGES & SOLUTIONS -->
+      <div class="slide">
+        <div class="slide-tag">Engineering Insights</div>
+        <h2 class="slide-title">Technical Challenges & Solutions</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div class="badge" style="background: rgba(245,158,11,0.15); color: #f59e0b; border-color: rgba(245,158,11,0.3);">Challenge 1</div>
+            <h3 style="margin: 8px 0;">Cross-Role State Sync</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <strong>Problem:</strong> Ensuring prescriptions created by doctors update in pharmacy queues without full manual page reloads.<br>
+              <strong>Solution:</strong> Polling and structured REST API refetching were used to keep prescription status synchronized across relevant views.
+            </p>
+          </div>
+          <div class="card">
+            <div class="badge" style="background: rgba(245,158,11,0.15); color: #f59e0b; border-color: rgba(245,158,11,0.3);">Challenge 2</div>
+            <h3 style="margin: 8px 0;">Secure Multi-Role Access Control</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+              <strong>Problem:</strong> Preventing unauthorized access to patient data across different roles.<br>
+              <strong>Solution:</strong> Enforced server-side JWT verification middleware on API endpoints checking user role and account approval state.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 18: FUTURE ENHANCEMENTS -->
+      <div class="slide">
+        <div class="slide-tag">Product Roadmap (Planned Scope)</div>
+        <h2 class="slide-title">Future Enhancements (Planned)</h2>
+        <div class="grid-3">
+          <div class="card">
+            <div class="badge" style="background: rgba(99,102,241,0.15); color: #6366f1; border-color: rgba(99,102,241,0.3);">PLANNED</div>
+            <h4 style="margin: 8px 0; color: #fff;">FHIR / HL7 Interoperability</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Standardized data exchanges with legacy hospital electronic health record (EHR) systems.</p>
+          </div>
+          <div class="card">
+            <div class="badge" style="background: rgba(99,102,241,0.15); color: #6366f1; border-color: rgba(99,102,241,0.3);">PLANNED</div>
+            <h4 style="margin: 8px 0; color: #fff;">Native iOS & Android Apps</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">React Native mobile application for mobile prescription scanning and push notifications.</p>
+          </div>
+          <div class="card">
+            <div class="badge" style="background: rgba(99,102,241,0.15); color: #6366f1; border-color: rgba(99,102,241,0.3);">PLANNED</div>
+            <h4 style="margin: 8px 0; color: #fff;">AI-Assisted Drug Interaction Detection</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Future AI-assisted analysis for identifying potential drug-drug interactions using validated clinical data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 19: CONCLUSION -->
+      <div class="slide">
+        <div class="slide-tag">Summary</div>
+        <h2 class="slide-title">Conclusion & Value Impact</h2>
+        <div class="card" style="max-width: 900px; margin: 0 auto; text-align: center; padding: 40px;">
+          <h3 style="color: var(--accent-teal); font-size: 1.8rem; margin-bottom: 16px;">MediSync Platform Impact</h3>
+          <p style="color: var(--text-sub); font-size: 1.1rem; line-height: 1.7; margin-bottom: 24px;">
+            MediSync provides a centralized digital workflow for prescription creation, verification, dispensing, and record management, improving traceability and reducing reliance on manual processes.
+          </p>
+          <div class="badge" style="font-size: 0.9rem; padding: 8px 16px;">Digitizing Prescription Workflows Through Secure, Connected Technology</div>
+        </div>
+      </div>
+
+      <!-- Slide 20: DEMO / Q&A -->
+      <div class="slide">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h1 style="font-family: var(--font-heading); font-size: 4rem; font-weight: 800; color: #fff; margin-bottom: 12px;">
+            Thank You
+          </h1>
+          <p style="font-size: 1.5rem; color: var(--accent-teal); font-weight: 700; margin-bottom: 32px;">
+            Live Product Demo & Q&A Session
+          </p>
+          <div class="card" style="display: inline-block; padding: 20px 40px; text-align: left;">
+            <div style="font-size: 0.9rem; color: var(--text-muted);">Project: <strong style="color: #fff;">MediSync</strong></div>
+            <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">Presenter: <strong style="color: #fff;">Tamilarasan</strong></div>
+            <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 6px;">Status: <strong style="color: var(--accent-teal);">Deployed Prototype</strong></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="deck-footer">
+      <div>MediSync — Executive & Technical Presentation Deck</div>
+      <div>Use ← → Arrow Keys or Space to Navigate</div>
+      <div>Confidential — For Evaluation Purposes Only</div>
+    </footer>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideNum = document.getElementById('slideNum');
+
+    function updateDeck() {
+      slides.forEach((slide, index) => {
+        if (index === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      slideNum.textContent = `Slide ${currentSlide + 1} / ${slides.length}`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateDeck();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        updateDeck();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'Space') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+  </script>
+</body>
+</html>
