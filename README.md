@@ -1,11 +1,14 @@
 # MediSync — Cryptographically Verified Healthcare & Prescription Platform
 
-[![Node.js Version](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online%20(GitHub%20Pages)-success?style=for-the-badge&logo=github)](https://tamilkakashi.github.io/medisync-healthcare/)
+[![Repository](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/tamilkakashi/medisync-healthcare)
 [![React Version](https://img.shields.io/badge/React-19.2-blue.svg)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-teal.svg)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**MediSync** is an enterprise-grade digital healthcare management and electronic prescription tracking platform. It guarantees medical record authenticity using **RSA-2048 / SHA-256 digital signatures** and tamper-proof audit trails across doctors, hospitals, pharmacies, patients, and administrators.
+> 🌐 **Live Web Application**: **[https://tamilkakashi.github.io/medisync-healthcare/](https://tamilkakashi.github.io/medisync-healthcare/)**  
+> 🔗 **GitHub Repository**: **[https://github.com/tamilkakashi/medisync-healthcare](https://github.com/tamilkakashi/medisync-healthcare)**  
+> Experience real-time role-based portals (Doctor, Pharmacy, Hospital, Patient, Admin) with instant dark/light themes and cryptographic verification.
 
 ---
 
@@ -38,16 +41,25 @@
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Live Demo Quick Access
 
-- **Frontend**: React 19, Vite, Tailwind CSS v4, Framer Motion, Lucide Icons, jsPDF, Axios.
-- **Backend**: Node.js, Express, JSON Web Tokens (JWT), Crypto (RSA/SHA-256), Bcrypt.
-- **Storage**: MongoDB Atlas with zero-downtime offline persistent database engine fallback.
-- **Deployment**: Vercel & GitHub.
+Click the link below to launch the live platform:
+👉 **[Open MediSync Live App](https://tamilkakashi.github.io/medisync-healthcare/)**
+
+### Demo Account Credentials
+Login directly with any of the pre-configured role accounts:
+
+| Role | Email | Password | Quick Link |
+| :--- | :--- | :--- | :--- |
+| **Doctor** | `testsurgeon@lumina.sys` | `123456` | [Login as Doctor](https://tamilkakashi.github.io/medisync-healthcare/#/login) |
+| **Pharmacy** | `testpharmacy@lumina.sys` | `123456` | [Login as Pharmacy](https://tamilkakashi.github.io/medisync-healthcare/#/login) |
+| **Hospital** | `testhospital@lumina.sys` | `123456` | [Login as Hospital](https://tamilkakashi.github.io/medisync-healthcare/#/login) |
+| **Patient** | `testpatient@lumina.sys` | `123456` | [Login as Patient](https://tamilkakashi.github.io/medisync-healthcare/#/login) |
+| **Admin** | `admin@medisync.com` | `123456` | [Login as Admin](https://tamilkakashi.github.io/medisync-healthcare/#/login) |
 
 ---
 
-## 💻 Quick Start Guide
+## 💻 Local Development Setup
 
 ### 1. Prerequisites
 - [Node.js](https://nodejs.org/) v18+ and npm installed.
@@ -87,18 +99,6 @@ npm run dev
 ```
 
 Visit **`http://localhost:5173`** in your browser.
-
----
-
-## 🔑 Demo Account Credentials
-
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Doctor** | `testsurgeon@lumina.sys` | `123456` |
-| **Pharmacy** | `testpharmacy@lumina.sys` | `123456` |
-| **Hospital** | `testhospital@lumina.sys` | `123456` |
-| **Patient** | `testpatient@lumina.sys` | `123456` |
-| **Admin** | `admin@medisync.com` | `123456` |
 
 ---
 
