@@ -4,7 +4,7 @@ import api from '../services/api';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/Card';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
-import { History, ClipboardList, BadgeCheck, Stethoscope, ShieldCheck, Clock, FileDown, Pill, User, Calendar, Activity, ChevronRight, Download, Zap, Database, ArrowRight, Bell, MapPin, Building } from 'lucide-react';
+import { History, ClipboardList, BadgeCheck, Stethoscope, ShieldCheck, Clock, FileDown, Pill, User, Calendar, Activity, ChevronRight, Download, Zap, Database, ArrowRight, Bell, MapPin, Building, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { jsPDF } from 'jspdf';
 import DashboardTopBar from './DashboardTopBar';
@@ -207,42 +207,81 @@ const PatientDashboard = () => {
 
                                 <AnimatePresence>
                                     {showNotifications && (
-                                        <motion.div
-                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                            className="absolute right-0 mt-4 w-72 sm:w-80 bg-white dark:bg-slate-900 rounded-[2rem] shadow-mega border border-slate-100 dark:border-slate-800 z-50 overflow-hidden"
-                                        >
-                                            <div className="p-6 border-b border-slate-50 bg-slate-50/50">
-                                                <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest italic">Notifications</h4>
-                                            </div>
-                                            <div className="max-h-96 overflow-y-auto">
-                                                {notifications.length > 0 ? (
-                                                    notifications.map(n => (
-                                                        <div
-                                                            key={n._id}
-                                                            onClick={() => !n.isRead && markAsRead(n._id)}
-                                                            className={cn(
-                                                                "p-6 border-b border-slate-50 cursor-pointer transition-colors hover:bg-slate-50",
-                                                                !n.isRead && "bg-brand/[0.02]"
-                                                            )}
-                                                        >
-                                                            <p className={cn("text-xs leading-relaxed mb-2 font-bold", !n.isRead ? "text-slate-900" : "text-slate-400")}>
-                                                                {n.message}
-                                                            </p>
-                                                            <p className="text-[9px] font-black text-slate-400 uppercase tracking-tighter">
-                                                                {new Date(n.createdAt).toLocaleDateString()} at {new Date(n.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                                                            </p>
+                                        <>
+                                            {/* Backdrop on mobile for easy dismissal */}
+                                            <div 
+                                                className="fixed inset-0 z-40 bg-slate-950/40 backdrop-blur-xs sm:hidden" 
+                                                onClick={() => setShowNotifications(false)} 
+                                            />
+
+                                            <motion.div
+                                                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                className="fixed inset-x-4 top-24 sm:top-auto sm:inset-auto sm:right-0 sm:mt-4 sm:absolute sm:w-80 w-auto max-w-sm sm:max-w-none mx-auto sm:mx-0 z-50 bg-white dark:bg-slate-900 rounded-[2rem] shadow-2xl border border-slate-200/90 dark:border-slate-800 overflow-hidden"
+                                            >
+                                                {/* Header with Title and Close Button */}
+                                                <div className="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/80 flex items-center justify-between">
+                                                    <div className="flex items-center gap-2.5">
+                                                        <div className="w-7 h-7 rounded-lg bg-brand/10 text-brand flex items-center justify-center">
+                                                            <Bell size={14} />
                                                         </div>
-                                                    ))
-                                                ) : (
-                                                    <div className="p-12 text-center">
-                                                        <Bell size={24} className="text-slate-200 mx-auto mb-4" />
-                                                        <p className="text-[10px] font-black text-slate-300 uppercase tracking-widest">No Alerts</p>
+                                                        <h4 className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-widest italic">
+                                                            Notifications {unreadCount > 0 && `(${unreadCount})`}
+                                                        </h4>
                                                     </div>
-                                                )}
-                                            </div>
-                                        </motion.div>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setShowNotifications(false)}
+                                                        className="w-7 h-7 rounded-lg bg-white dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 flex items-center justify-center text-slate-500 dark:text-slate-300 transition-colors cursor-pointer shadow-xs"
+                                                        aria-label="Close notifications"
+                                                    >
+                                                        <X size={15} />
+                                                    </button>
+                                                </div>
+
+                                                {/* Notifications List */}
+                                                <div className="max-h-[60vh] sm:max-h-96 overflow-y-auto custom-scrollbar">
+                                                    {notifications.length > 0 ? (
+                                                        notifications.map(n => (
+                                                            <div
+                                                                key={n._id}
+                                                                onClick={() => !n.isRead && markAsRead(n._id)}
+                                                                className={cn(
+                                                                    "p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800/60 cursor-pointer transition-colors hover:bg-slate-50 dark:hover:bg-slate-800/50",
+                                                                    !n.isRead && "bg-brand/[0.04] dark:bg-brand/[0.08]"
+                                                                )}
+                                                            >
+                                                                <div className="flex items-start justify-between gap-3 mb-1.5">
+                                                                    <p className={cn(
+                                                                        "text-xs leading-relaxed font-bold break-words whitespace-normal",
+                                                                        !n.isRead ? "text-slate-900 dark:text-white" : "text-slate-500 dark:text-slate-400"
+                                                                    )}>
+                                                                        {n.message}
+                                                                    </p>
+                                                                    {!n.isRead && (
+                                                                        <span className="w-2 h-2 rounded-full bg-brand shrink-0 mt-1" />
+                                                                    )}
+                                                                </div>
+                                                                <div className="flex items-center justify-between text-[10px] font-bold text-slate-400 dark:text-slate-500">
+                                                                    <span>
+                                                                        {new Date(n.createdAt).toLocaleDateString()} • {new Date(n.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                                                    </span>
+                                                                    {!n.isRead && (
+                                                                        <span className="text-[9px] font-black uppercase text-brand tracking-wider">New</span>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        ))
+                                                    ) : (
+                                                        <div className="p-8 text-center">
+                                                            <Bell size={24} className="text-slate-300 dark:text-slate-600 mx-auto mb-2" />
+                                                            <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">No Alerts</p>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </motion.div>
+                                        </>
                                     )}
                                 </AnimatePresence>
                             </div>
