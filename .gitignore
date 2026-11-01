@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Production Builds
+dist/
+*/dist/
+build/
+*/build/
+
+# Logs & Temp Build Outputs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*build_output*.txt
+*build_logs.txt
+*build_out.txt
+*eslint_output.json
+MOCK_EMAIL_LOG.txt
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Deployment & Temporary files
+.vercel
+.netlify
+.turbo
+~$*
+*.tmp
+*.temp

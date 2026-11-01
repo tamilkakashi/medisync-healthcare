@@ -1,0 +1,532 @@
+{
+  "users": [
+    {
+      "_id": "660000000000000000000001",
+      "name": "System Administrator",
+      "email": "admin@lumina.sys",
+      "password": "$2b$10$KWIn5fMQI2PQRcPHx3PoKet8VQ0FzNyhm8gSS18PQerl/ZFJQBiDe",
+      "role": "admin",
+      "isApproved": true,
+      "status": "approved",
+      "createdAt": "2026-10-31T17:32:27.739Z"
+    },
+    {
+      "_id": "660000000000000000000006",
+      "name": "MediSync Admin",
+      "email": "admin@medisync.com",
+      "password": "$2b$10$KWIn5fMQI2PQRcPHx3PoKet8VQ0FzNyhm8gSS18PQerl/ZFJQBiDe",
+      "role": "admin",
+      "isApproved": true,
+      "status": "approved",
+      "createdAt": "2026-10-31T17:32:27.740Z"
+    },
+    {
+      "_id": "660000000000000000000002",
+      "name": "Metro Health Central",
+      "email": "testhospital@lumina.sys",
+      "password": "$2b$10$KWIn5fMQI2PQRcPHx3PoKet8VQ0FzNyhm8gSS18PQerl/ZFJQBiDe",
+      "role": "hospital",
+      "address": "100 Medical Plaza, Metro City",
+      "isApproved": true,
+      "status": "approved",
+      "createdAt": "2026-10-31T17:32:27.740Z"
+    },
+    {
+      "_id": "660000000000000000000003",
+      "name": "Dr. Marcus Vance",
+      "email": "testsurgeon@lumina.sys",
+      "password": "$2b$10$KWIn5fMQI2PQRcPHx3PoKet8VQ0FzNyhm8gSS18PQerl/ZFJQBiDe",
+      "role": "doctor",
+      "department": "Cardiology",
+      "roomNumber": "304",
+      "floorNumber": "3",
+      "hospitalId": "660000000000000000000002",
+      "associatedHospital": "660000000000000000000002",
+      "isApproved": true,
+      "status": "approved",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApHA5Qbq/Dp8cqYVJcn70\nC3hl6CfjYWZy5P7153kDsX72qmMC9m4rDlJs5tG+MjBvSOETek+A29md7/Na/ZA5\nOuPcH0YjpzTQNsJPhfjzwKUPuvaBvCWTFiGp24mHwzQ2WRN0HqgnKvH6ScrUssED\nZjeIuyvLrtJ+FlUN3+gmuiK0XJR/w514W6LrCrZNExXE73Y4E2DZFlSPNKm4TeCo\nNghv1GVmkHYrWt/I+O5nhtQ5QYdomDDEsC2/FVOQ1zgtiNUdu9FQw55bf0Qs5W/8\npqcgZe2Fvn+0guB72YoiEnfZnp7TJhHNvjvXaaITyassuVMr6rj5xt7SXU0so6oF\n3wIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCkcDlBur8Onxyp\nhUlyfvQLeGXoJ+NhZnLk/vXneQOxfvaqYwL2bisOUmzm0b4yMG9I4RN6T4Db2Z3v\n81r9kDk649wfRiOnNNA2wk+F+PPApQ+69oG8JZMWIanbiYfDNDZZE3QeqCcq8fpJ\nytSywQNmN4i7K8uu0n4WVQ3f6Ca6IrRclH/DnXhbousKtk0TFcTvdjgTYNkWVI80\nqbhN4Kg2CG/UZWaQdita38j47meG1DlBh2iYMMSwLb8VU5DXOC2I1R270VDDnlt/\nRCzlb/ympyBl7YW+f7SC4HvZiiISd9mentMmEc2+O9dpohPJqyy5UyvquPnG3tJd\nTSyjqgXfAgMBAAECggEANBgBa5tXz7AEiofZPtaNRdz8m9GXLVIhb/59tLkXvHF2\nf4AifiNkrILcUTt9P7UsbDAx1Xu+XOfSKyQzXUUFfGyXXakAvoXyuIZSXyUBQ7SH\nCTny28IjmM1NXGlzgxnVZd7N2LB4yBgkrJ//Rinzg7xwKquzOU0h+L01SgvnyOuX\nlZhNB/HGKjIxQmCSEz5wk9nmFIx81o68spkLmr8uak+c1rIxhCa4dJecN1dhtUOn\nLH9izrFU1wyrvwZiO0AFW4fv+C7XAHdyNFag3CnYGvmC7xc5VHQw6w9sPl819/as\nkIAklau0y+Qip2kDqGNHclMUQntxH7rWQogeiDfygQKBgQDU4PO/iN9choWgurCX\n2ZAKYZY8iFXErW9G+Rn4G5hNUh7Ghn+pQOtahItaUXzsSwXvkFWhrIcHHXZosasu\nAdv/39exkMesmR7xCpHoyT06Idsuw2RggekjrKmgQgroV7SnVP7uU4FO9655iVG/\n2gltXlzpXvvcgk+PE1UaNnmc4QKBgQDFv1jPBc+3BV7YLVPAq1+Oe389lAmO70A9\nMWeTkEdOErfIpNZfmMfkZsPjMASLFRJ39Aq/hX4+ygLJ4Lvgge5CYWJ8trqjqBzK\nXOnV/dUlP8CNSL7AhwTt0NvYPZEskjAqFfoWnT63J4FsoPcX3uA246xFfGEDL/Go\nen8AMsM6vwKBgQDT4n/aodKolqDE5W1GB1/OZWmTIKQ12ebLfr+xa04Bj/5f3ZmN\njrdzZkAKCtfLnbTvyPrirAXOOC4WcNkQNvuRyGw5KgEEs3fPtZSbXkoZ5X7zIbp0\nMHosbvx7LaELt9hxQTFpaCZpwi+geuSqj8wYVvcltcv8pJuprjVjnNsZIQKBgQCz\n244S/d4nQSM6zD9ZBoYrOfhJMdRfxQxQnBbxCFFSmYO/Yu34lSV6gF26zXnUZp4d\nrEH6YJiq02Il69n2ITdr+NdzR2AKamWFSW0FzZGIB6xC1N9qjWPWShkrXRQlzfEw\n1jxZRTw9qhj1jJIxi+2y/vE5Yh96nqjV7FSHAaTAUQKBgAsmFOKae+I1CaCud/DP\nYX1Pbr6Yfq86YVKpELkWg1CF/FMgMb3eW9Yt+HWe9ZMtLTESqozbsw+324+1wEco\nk/BoO0kpWYi2S8XgPVAisGa7LR/IaaeQEZcZsYDrk7FVVI5fnZHyNNqslICEl+Hm\n8gVGFAC4HJxwrlcBwvpYDVtR\n-----END PRIVATE KEY-----\n",
+      "createdAt": "2026-10-31T17:32:27.740Z"
+    },
+    {
+      "_id": "660000000000000000000004",
+      "name": "Eleanor Rigby",
+      "email": "testpatient@lumina.sys",
+      "password": "$2b$10$KWIn5fMQI2PQRcPHx3PoKet8VQ0FzNyhm8gSS18PQerl/ZFJQBiDe",
+      "role": "patient",
+      "hospitalId": "660000000000000000000002",
+      "address": "42 Abbey Road, Metro City",
+      "isApproved": true,
+      "status": "approved",
+      "createdAt": "2026-10-31T17:32:27.740Z",
+      "doctorId": "3d3d2899e6613da322163f98"
+    },
+    {
+      "_id": "660000000000000000000005",
+      "name": "Apex Pharmaceuticals",
+      "email": "testpharmacy@lumina.sys",
+      "password": "$2b$10$KWIn5fMQI2PQRcPHx3PoKet8VQ0FzNyhm8gSS18PQerl/ZFJQBiDe",
+      "role": "pharmacy",
+      "licenseNumber": "PH-2026-998",
+      "address": "12 Commercial Blvd, Metro City",
+      "isApproved": true,
+      "status": "approved",
+      "createdAt": "2026-10-31T17:32:27.740Z"
+    },
+    {
+      "name": "Jane Doe",
+      "email": "janedoe@example.com",
+      "password": "$2b$10$4E3VjwIbc/Pp35wSYq38jOJv0zlDa.EyzsXU2TWGRsuU3L.hg/AMm",
+      "role": "patient",
+      "isApproved": true,
+      "status": "approved",
+      "publicKey": "",
+      "privateKey": "",
+      "_id": "696041ed673b9b03b6c6be93",
+      "createdAt": "2026-10-31T17:33:13.061Z"
+    },
+    {
+      "name": "QA Patient",
+      "email": "qa.patient.1793471941975@test.com",
+      "password": "$2b$10$kBkNL.XuGiywON3FuZbx6uhHZ5NF3Yc/10fFP32HLZIoBfGTrnoqS",
+      "role": "patient",
+      "isApproved": true,
+      "status": "approved",
+      "publicKey": "",
+      "privateKey": "",
+      "address": "42 QA Lane",
+      "_id": "f23da275fc37df7bfdcacdd6",
+      "createdAt": "2026-10-31T18:39:02.069Z"
+    },
+    {
+      "name": "Dr. Sarah Connor MD",
+      "password": "$2b$10$RKAZBLEhoigNE/pk3PjgpuGZcxc4KxM9589D3LSx3ahlJpVOt9jWS",
+      "status": "approved",
+      "isApproved": true,
+      "hospitalId": "660000000000000000000002",
+      "department": "Neurology",
+      "licenseNumber": "LIC-NEURO-999",
+      "roomNumber": "405",
+      "floorNumber": "4",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxzPcau3n6hYyoY0FPR60\nblv2v7mu2nciiMprtPWcA0tP7vgppH6p83NdggXUPlxJMa8n9lWezidy4ves3G7R\ng1NRkbuUJA1NmILsQg3xr499Ek0QlbCsUBb2pOOacAoplI4wmii1GTYlmzB8ppqd\n9Kxq9mTPy+pFLbBbeSnbqSMrq3Vj7q54+OYEhd6MLK3WRny0eN7pPWTL363m6wOt\nVbk/eVDX/5Fi9QScb7N8nPQt/sWciUugKsZtLVQmnIZerZAlwxD5SjGaJiyJbpBQ\nh7m7yE6EhSczsy/SaQ+80KQTgyH2hfJp190TmcElqJYKtV0xGEUd207op5euI/gE\nwQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDHM9xq7efqFjKh\njQU9HrRuW/a/ua7adyKIymu09ZwDS0/u+Cmkfqnzc12CBdQ+XEkxryf2VZ7OJ3Li\n96zcbtGDU1GRu5QkDU2YguxCDfGvj30STRCVsKxQFvak45pwCimUjjCaKLUZNiWb\nMHymmp30rGr2ZM/L6kUtsFt5KdupIyurdWPurnj45gSF3owsrdZGfLR43uk9ZMvf\nrebrA61VuT95UNf/kWL1BJxvs3yc9C3+xZyJS6Aqxm0tVCachl6tkCXDEPlKMZom\nLIlukFCHubvIToSFJzOzL9JpD7zQpBODIfaF8mnX3ROZwSWolgq1XTEYRR3bTuin\nl64j+ATBAgMBAAECggEADDYcKXvrDxkMQoYED7KdqfQ+RJOL6f2KousRvjaeOT95\nJ3OUDe7r2S41yb40vBvpKsALiZjHEuktLEe1k4/BjTTi17Wxh6I/Iv3HoOb87V+0\n8ZXC0gJSFdjKhuIi+gJNeTtcNF8RdvmwRXqr8YSh8TlOl0snx97VHc9lVCCiRBR1\nhxOwVBdmFXk5HO0vmc+kTqC//SmX+AgNFaRiE8j/df8tC+E6KuBlXGneLPD2ThP3\nIc/zGRMdMG7rn58a9zQ/qYINg6EJ0s2gnqTVK9f+bWrBLkXUWLCUBP5SMVfSSkM6\nV3WaO2o10i7JwVqSligv4BW/7wl7wlI1G+IMbWrAhwKBgQD6mquUYN84QG3XlXVQ\nCXdKZr2ldacgOPVrUPNluuyjjAuQR7GFzZfHaWubgxGaDvwvWjkjVbJJbSN5AR+k\np8J7HSwDIWa0BB4mR5MUxARJDBlTl1bW543ai7ejjVuMqKx3aumFkWP46gF8IraO\nTT8wGrOv1ps3116uR/TPCBDNLwKBgQDLfd2Bs1vXry2uD4UUT92+SstZcc0DDzPi\n0sDEZywVGUHt1AfB1AOYwPMZiGwGXQN7pWdcjqzJ8hqeXo/pAWZzRViBNs0hDu2r\nvFoxPOdzr+4b2fzErnVEymovMr8DIbitq3OwlG/GtGf5NE3qoDRYyWTHxxG+xouN\njk1OVioxDwKBgFyJkKIRw1t6LxVUUyVi2XHXzl+yuivj3HvsQHRoOcmKhRqZ3quR\n52HzQ5EBLRa+QdEad87cbiE+88JS7+RVLjNX6lCdnNcMTjXEaENavlpa5V9Amwhw\nKKlyvjTeldey0TyndeOkdE4N2s6D4vVZAOQ6d++OR3KvTH7+gx+P0uRxAoGANaBS\n2pZg0sNIn4FZidPOVRKy6jxyUacU/maaBGhIFrtUQ4/IB42O8ReQOR9ZkIe8nj4l\nsh+ra4DRAQFcnYQP8rrIqyy8/ERJ4CNABY/OUw9/CXn2AgMTxnAtcYjHC9U8LRBs\n6ZEEr/HlIKhnDDjx8qAIXhmZFJSQPFrPBqDwd4MCgYBKkhieJZDG75BUDs4/HQBD\nlji0+77UujEQhEHTr2lvV6/ldTPMtVLg+tFqLCFhMMekfWckPm555NLkubM38OYL\nQ003qZfvWWrafEtvti53JG/J9qTZH9QFOaMIuGelIzI8GrdI3i99+HPdIXvZ+byY\nlkZVyLfin1wChqXl3X6oWw==\n-----END PRIVATE KEY-----\n",
+      "_id": "b1b667ef9cda1e0d8ecb2c30",
+      "createdAt": "2026-10-31T18:39:02.690Z"
+    },
+    {
+      "name": "QA Patient",
+      "email": "qa.patient.1793472318312@test.com",
+      "password": "$2b$10$iyhLJu5B3oX9uPwuybVHl.Zy6pJbXKN9vNKEpdZDzQHPRp9XYMyMm",
+      "role": "patient",
+      "isApproved": true,
+      "status": "approved",
+      "publicKey": "",
+      "privateKey": "",
+      "address": "42 QA Lane",
+      "_id": "9aa11a9831868bfd0de40a89",
+      "createdAt": "2026-10-31T18:45:18.409Z"
+    },
+    {
+      "name": "Dr. Sarah Connor MD",
+      "password": "$2b$10$vH0r.7HWQk/AufWZuqqJNeaGOAWrDgDVmO1M5QKRz5pIaoUFdg3/S",
+      "status": "approved",
+      "isApproved": true,
+      "hospitalId": "660000000000000000000002",
+      "department": "Neurology",
+      "licenseNumber": "LIC-NEURO-999",
+      "roomNumber": "405",
+      "floorNumber": "4",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkmGsVdccSQ8zaVLcM3o0\nsu4GVZp3ZIDPSX9FXs1zlLAxs60lgaOSWBOBoT4xuQbJ4KDANbnSZqGI8bqU1edA\nLrodJZVUgT27tyZqMziKngbvejBhzY/sclUesduyM2QQy/i+mcJrKflHIsQn50ui\nWMKFYg2bOfXifShtOhP/Ym/KUwy9fbOJ5u5mngqJMBaLvWdBSWk5PK/v/LXYq7ou\nQHVEB5BOcIKcLfiht4TMreYC2PXC8nXdZELVkGhckClleIXuMC1xjjsDvlKhefjE\nL5/+9ezwHic9sm+o51i4ptOnETCOSw2Tf/lI1ioldl59u5X5HrBYyNVXwc2L+9qr\nSwIDAQAB\n-----END PUBLIC KEY-----\n",
+      "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCSYaxV1xxJDzNp\nUtwzejSy7gZVmndkgM9Jf0VezXOUsDGzrSWBo5JYE4GhPjG5BsngoMA1udJmoYjx\nupTV50Auuh0llVSBPbu3JmozOIqeBu96MGHNj+xyVR6x27IzZBDL+L6Zwmsp+Uci\nxCfnS6JYwoViDZs59eJ9KG06E/9ib8pTDL19s4nm7maeCokwFou9Z0FJaTk8r+/8\ntdirui5AdUQHkE5wgpwt+KG3hMyt5gLY9cLydd1kQtWQaFyQKWV4he4wLXGOOwO+\nUqF5+MQvn/717PAeJz2yb6jnWLim06cRMI5LDZN/+UjWKiV2Xn27lfkesFjI1VfB\nzYv72qtLAgMBAAECggEAD03u+rqW1nykX2quYyNvxxVjzCduPC/LfF+2HQdWAkG5\nsJN1zGwRrOu9LeKWyEWRbc7gyb035ksVSlC7pvGaoEgNLBTE1Q5jRe7aQ6ixtXv8\nJcZRM3DMw9dqciYKJ51atDi5lNHi6myJp3Tixyf9PVJ5J5tMk27F01gas2vL07q7\n3ki97Y/mYQHvX4qjWLjIpGpu95+qyCVonLisHDyL9IvGfkuh9sXITX5alWq5b9AT\ngbJOoF2O63tXAPhMAcEEOu7vkySJ7XtUod/xD/s5BCP2WJR5ueIkQ56XaeepsQML\nsQbn6IDPDcW80gXWXamadCuPFmZgNYrLdXO4JAhOwQKBgQDMhuE3vpCxX4zoIXkG\nm9zGhhLuVIg8HPmN+mHPawEa12oATEuc5Ev+YHrxH1ehF4AKh+TBM9lKYdDlm44H\n05uHgnpl3EMzMkf5eD0quc6qYY/LbcI+0/RQrU/tBH6bi8UyEuW2JXi4HtRRrnWV\nDPgg7rkqUfK8ufYzN1Hb+jBaWQKBgQC3OKUDflujJJXvaYOA9YJ/1CHVpPoBdvs/\ntN4Xtw8mMxqxfxyh6l+ZWKzDIl1VouUsaCmnOvF8Z4kCLV6Nv4E9TyVK+j5XY/jw\nX+qc3LKoGcupktJIvUbfDkhrUQccodQlopXUu0yKu2E+mVWAltUY4sF8rlk7976s\n+bOFRj52QwKBgHLWsRKZv6i4W+fjE49waJBXq72CXVRTeJQNqGnMTTyDA5PTQwl+\n7mSQS7ejv5JGHbDMCNeqgzFOpvqlUyR13nhB/PPAr0LJ0rvylXWuCqqESTcSE+Uv\nIZlDFwOgaG5yFnE9Rxn1BEltlg2fBYqBU7k6EWH/zWnGiMTNJPt9CTVRAoGADCiR\nIrs234uk+383/83K/CqamC/be09m+uJIvrAiLDnF8rNptgD0mRt+U3CrWux1Ys4C\nvZs2vTetqtxR4vwrWmMvKVuT2X7D3UewLPqkTG1xy2330GXnFxQ+kAiPfUHr7xdr\n8/L98FLg8COCvgbEW2NozZpQR594IshrNlPj/zsCgYBtPX6sa/KKDy3Oe3J/upBC\nQR58zx7AnMkf5CDe7xq8vZ4HWEH61zKe6HEd2XJEIOwGVzVNgGB/qcg7lzIa8VGk\nzsQ0eDb/lmvmyGHQdXUu6dEPwz5eEHZIEYthiTHU5JetBWtvtYfixF7BAPsvdU/B\noQGSiIiccDeeTw8VkJuJ2w==\n-----END PRIVATE KEY-----\n",
+      "_id": "3d3d2899e6613da322163f98",
+      "createdAt": "2026-10-31T18:45:19.081Z"
+    }
+  ],
+  "prescriptions": [
+    {
+      "_id": "660000000000000000000010",
+      "doctorId": "660000000000000000000003",
+      "patientId": "660000000000000000000004",
+      "patientName": "Eleanor Rigby",
+      "patientAge": 34,
+      "diagnosis": "Hypertension Stage 1",
+      "medicines": [
+        {
+          "name": "Lisinopril",
+          "dosage": "10mg",
+          "frequency": "Once daily in the morning",
+          "duration": "30 days"
+        }
+      ],
+      "status": "dispensed",
+      "expiryDate": "2027-01-01",
+      "prescriptionHash": "a1b2c3d4e5f6789012345678901234567890abcdef1234567890abcdef123456",
+      "digitalSignature": "signature_demo_valid",
+      "createdAt": "2026-10-31T17:32:27.740Z",
+      "dispensedBy": "660000000000000000000005"
+    },
+    {
+      "doctorId": "660000000000000000000003",
+      "patientId": "testpatient@lumina.sys",
+      "patientName": "Eleanor Rigby",
+      "patientAge": 29,
+      "diagnosis": "Seasonal Asthmatic Bronchitis",
+      "medicines": [
+        {
+          "name": "Albuterol Sulfate Inhaler",
+          "dosage": "90mcg",
+          "frequency": "PRN",
+          "duration": "30 days"
+        },
+        {
+          "name": "Prednisone",
+          "dosage": "20mg",
+          "frequency": "QD",
+          "duration": "5 days"
+        }
+      ],
+      "expiryDate": "2026-12-31",
+      "prescriptionHash": "cf168040cda69a6acf62208b3f82c0e324519b64a433db01f980ddade29e6cf2",
+      "digitalSignature": "5802e3639ced2bcd98db35805d298c487023921ff3c3c3a20665a33e4c97f21739b8222ecbca1fdc6896f616732e636019ff0954d3a34b40aa9b65e695fbe0e54b96b18634036178f48e6194e554728a331187b95267ffb34ab3ac68679e1f0e3906e0f482cd3f36cca63b676db53930f369600e26671699ddd8e871e8598c08c372d03d5314348fee42d6f889ed69460b24bb3f7db4282ebd8edd0c706294757f6e003eeae9e4b719b5939b204fa94e6b6804d115bd5f926043adac8e88486ea564eabcc90922cdeb653d2c8e898b3439640a0538dad6f1ae640b73652c5d05c4ce0335808c6a74846d82e021706dbc208d5d0401f8d2cb88532178e8b90fd2",
+      "status": "dispensed",
+      "_id": "a7f3bcf132a3bfe2e1808ed3",
+      "createdAt": "2026-10-31T18:33:32.309Z",
+      "dispensedBy": "660000000000000000000005"
+    },
+    {
+      "doctorId": "660000000000000000000003",
+      "patientId": "testpatient@lumina.sys",
+      "patientName": "Eleanor Rigby",
+      "patientAge": 29,
+      "diagnosis": "Seasonal Asthmatic Bronchitis",
+      "medicines": [
+        {
+          "name": "Albuterol Sulfate Inhaler",
+          "dosage": "90mcg",
+          "frequency": "PRN",
+          "duration": "30 days"
+        },
+        {
+          "name": "Prednisone",
+          "dosage": "20mg",
+          "frequency": "QD",
+          "duration": "5 days"
+        }
+      ],
+      "expiryDate": "2026-12-31",
+      "prescriptionHash": "cf168040cda69a6acf62208b3f82c0e324519b64a433db01f980ddade29e6cf2",
+      "digitalSignature": "5802e3639ced2bcd98db35805d298c487023921ff3c3c3a20665a33e4c97f21739b8222ecbca1fdc6896f616732e636019ff0954d3a34b40aa9b65e695fbe0e54b96b18634036178f48e6194e554728a331187b95267ffb34ab3ac68679e1f0e3906e0f482cd3f36cca63b676db53930f369600e26671699ddd8e871e8598c08c372d03d5314348fee42d6f889ed69460b24bb3f7db4282ebd8edd0c706294757f6e003eeae9e4b719b5939b204fa94e6b6804d115bd5f926043adac8e88486ea564eabcc90922cdeb653d2c8e898b3439640a0538dad6f1ae640b73652c5d05c4ce0335808c6a74846d82e021706dbc208d5d0401f8d2cb88532178e8b90fd2",
+      "status": "dispensed",
+      "_id": "0c0f3a1fb73089bb68dab73c",
+      "createdAt": "2026-10-31T18:39:02.700Z",
+      "dispensedBy": "660000000000000000000005"
+    },
+    {
+      "doctorId": "660000000000000000000003",
+      "patientId": "testpatient@lumina.sys",
+      "patientName": "Eleanor Rigby",
+      "patientAge": 29,
+      "diagnosis": "Seasonal Asthmatic Bronchitis",
+      "medicines": [
+        {
+          "name": "Albuterol Sulfate Inhaler",
+          "dosage": "90mcg",
+          "frequency": "PRN",
+          "duration": "30 days"
+        },
+        {
+          "name": "Prednisone",
+          "dosage": "20mg",
+          "frequency": "QD",
+          "duration": "5 days"
+        }
+      ],
+      "expiryDate": "2026-12-31",
+      "prescriptionHash": "cf168040cda69a6acf62208b3f82c0e324519b64a433db01f980ddade29e6cf2",
+      "digitalSignature": "5802e3639ced2bcd98db35805d298c487023921ff3c3c3a20665a33e4c97f21739b8222ecbca1fdc6896f616732e636019ff0954d3a34b40aa9b65e695fbe0e54b96b18634036178f48e6194e554728a331187b95267ffb34ab3ac68679e1f0e3906e0f482cd3f36cca63b676db53930f369600e26671699ddd8e871e8598c08c372d03d5314348fee42d6f889ed69460b24bb3f7db4282ebd8edd0c706294757f6e003eeae9e4b719b5939b204fa94e6b6804d115bd5f926043adac8e88486ea564eabcc90922cdeb653d2c8e898b3439640a0538dad6f1ae640b73652c5d05c4ce0335808c6a74846d82e021706dbc208d5d0401f8d2cb88532178e8b90fd2",
+      "status": "dispensed",
+      "_id": "4323b92d5e6bda2f3fa3d370",
+      "createdAt": "2026-10-31T18:45:19.094Z",
+      "dispensedBy": "660000000000000000000005"
+    },
+    {
+      "doctorId": "660000000000000000000003",
+      "patientId": "crud.patient.1793513845658@patient.sys",
+      "patientName": "Arthur Dent Esq.",
+      "patientAge": 42,
+      "diagnosis": "Hyperspace Travel Vertigo",
+      "medicines": [
+        {
+          "name": "Pan Galactic Gargle Blaster",
+          "dosage": "10ml",
+          "frequency": "PRN",
+          "duration": "3 days"
+        },
+        {
+          "name": "Hydrocortisone",
+          "dosage": "10mg",
+          "frequency": "BID",
+          "duration": "7 days"
+        }
+      ],
+      "expiryDate": "2027-01-01",
+      "prescriptionHash": "2b55217651cc188a4f15f4cd8acdc8c3ce0e8256480da1fbd9e3a3cf50e280f8",
+      "digitalSignature": "61c0a1813a3cf0f6f331ec1077899c8742717e2e57bbe3101786e3adb4532d2032ac50ad056a9039a588a768fdc18ca7afea08bd7ce8239c329cdeb6ac23906d7aabf754bfe7eed869189ef5e1bf6f10f237622f73d495c79e24d5b0fe44d19fa5aef59b6857be14fb931988cee68b23574769593e45a7b6205177bb533eb8a1536f1f1fb8172d826c95969ec8a5b102137158a885966022f9a729c6b0a4c02ff5a17e8efd08bae0340334dbcfb04ce3c423969b33c2cbce71502a965acc67dadb43ebf5ce2bba6571c89247d9a34df5d6ff8265f89fcceae88b1575fe913fec74e73624a43a5d0af3b3f064a5dac60288cd9c97460429c3b7b338ed6b8f4df9",
+      "status": "dispensed",
+      "_id": "914110d90e4e2d3a67ff1c8c",
+      "createdAt": "2026-11-01T06:17:25.961Z",
+      "dispensedBy": "660000000000000000000005"
+    }
+  ],
+  "auditLogs": [
+    {
+      "actorId": "660000000000000000000005",
+      "actorRole": "pharmacy",
+      "action": "DISPENSE_PRESCRIPTION",
+      "details": "Prescription dispensed to patient Eleanor Rigby",
+      "targetId": "660000000000000000000010",
+      "targetType": "Prescription",
+      "_id": "1b718f7ace6c1ac5d1194b97",
+      "createdAt": "2026-11-01T06:37:42.004Z"
+    },
+    {
+      "actorId": "660000000000000000000006",
+      "actorRole": "admin",
+      "action": "DELETE_USER",
+      "details": "Deleted patient: Arthur Dent Esq. (crud.patient.1793513845658@patient.sys)",
+      "targetId": "d9dfdd3baf69f7dd099288a6",
+      "targetType": "User",
+      "_id": "54d8741b320b4d9d3e2940ab",
+      "createdAt": "2026-11-01T06:17:26.133Z"
+    },
+    {
+      "actorId": "660000000000000000000006",
+      "actorRole": "admin",
+      "action": "DELETE_USER",
+      "details": "Deleted pharmacy: Omega Community Pharmacy (crud.pharm.1793513845991@pharma.sys)",
+      "targetId": "e6d44ce345c6d553fe3e18bf",
+      "targetType": "User",
+      "_id": "ac46cc02b3003cee8b222ea4",
+      "createdAt": "2026-11-01T06:17:26.128Z"
+    },
+    {
+      "actorId": "660000000000000000000003",
+      "actorRole": "doctor",
+      "action": "DELETE_PRESCRIPTION",
+      "details": "Deleted prescription for patient Arthur Dent Esq.",
+      "targetId": "3099e0c5d76387bfae9f206d",
+      "targetType": "Prescription",
+      "_id": "b5508af96835e09ab026cb0a",
+      "createdAt": "2026-11-01T06:17:25.985Z"
+    },
+    {
+      "actorId": "660000000000000000000003",
+      "actorRole": "doctor",
+      "action": "CREATE_PRESCRIPTION",
+      "details": "Prescription created for patient Arthur Dent Esq.",
+      "targetId": "3099e0c5d76387bfae9f206d",
+      "targetType": "Prescription",
+      "_id": "528517aa054bd1371690797c",
+      "createdAt": "2026-11-01T06:17:25.981Z"
+    },
+    {
+      "actorId": "660000000000000000000005",
+      "actorRole": "pharmacy",
+      "action": "DISPENSE_PRESCRIPTION",
+      "details": "Prescription dispensed to patient Arthur Dent Esq.",
+      "targetId": "914110d90e4e2d3a67ff1c8c",
+      "targetType": "Prescription",
+      "_id": "267a03c82820da5cff889338",
+      "createdAt": "2026-11-01T06:17:25.974Z"
+    },
+    {
+      "actorId": "660000000000000000000003",
+      "actorRole": "doctor",
+      "action": "CREATE_PRESCRIPTION",
+      "details": "Prescription created for patient Arthur Dent Esq.",
+      "targetId": "914110d90e4e2d3a67ff1c8c",
+      "targetType": "Prescription",
+      "_id": "838c4086f04c347a17c7c8be",
+      "createdAt": "2026-11-01T06:17:25.961Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "LINK_PATIENT_DOCTOR",
+      "details": "Linked patient Arthur Dent Esq. to Dr. Dr. Marcus Vance. Notification sent.",
+      "targetId": "d9dfdd3baf69f7dd099288a6",
+      "targetType": "User",
+      "_id": "eaedf3f4c739edaa411ecc56",
+      "createdAt": "2026-11-01T06:17:25.947Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "DELETE_DOCTOR",
+      "details": "Deleted doctor: Dr. Gregory House",
+      "targetId": "bb82f6d26e5204c8e34dd8d7",
+      "targetType": "User",
+      "_id": "c26dac67f366a920dabec863",
+      "createdAt": "2026-11-01T06:17:25.656Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "CREATE_DOCTOR",
+      "details": "Created doctor: Dr. Gregory House (crud.doc.1793513845404@lumina.sys) in Diagnostic Medicine",
+      "targetId": "bb82f6d26e5204c8e34dd8d7",
+      "targetType": "User",
+      "_id": "d73698473da2d817434a0312",
+      "createdAt": "2026-11-01T06:17:25.641Z"
+    },
+    {
+      "actorId": "660000000000000000000006",
+      "actorRole": "admin",
+      "action": "DELETE_USER",
+      "details": "Deleted patient: Updated Temp User (undefined)",
+      "targetId": "47744f6e4420948ce8a6eb8c",
+      "targetType": "User",
+      "_id": "bc458ba4f4bfa376d84be480",
+      "createdAt": "2026-11-01T06:17:25.401Z"
+    },
+    {
+      "actorId": "660000000000000000000005",
+      "actorRole": "pharmacy",
+      "action": "DISPENSE_PRESCRIPTION",
+      "details": "Prescription dispensed to patient Eleanor Rigby",
+      "targetId": "4323b92d5e6bda2f3fa3d370",
+      "targetType": "Prescription",
+      "_id": "9d252192a9d4546ad5595453",
+      "createdAt": "2026-10-31T18:45:19.105Z"
+    },
+    {
+      "actorId": "660000000000000000000003",
+      "actorRole": "doctor",
+      "action": "CREATE_PRESCRIPTION",
+      "details": "Prescription created for patient Eleanor Rigby",
+      "targetId": "4323b92d5e6bda2f3fa3d370",
+      "targetType": "Prescription",
+      "_id": "75147f1a89c57a75c7c6774c",
+      "createdAt": "2026-10-31T18:45:19.095Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "LINK_PATIENT_DOCTOR",
+      "details": "Linked patient Eleanor Rigby to Dr. Dr. Sarah Connor. Notification sent.",
+      "targetId": "660000000000000000000004",
+      "targetType": "User",
+      "_id": "bc5477e8a9e6120a6ec2cabe",
+      "createdAt": "2026-10-31T18:45:19.089Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "CREATE_DOCTOR",
+      "details": "Created doctor: Dr. Sarah Connor (dr.specialist.1793472318953@lumina.sys) in Neurology",
+      "targetId": "3d3d2899e6613da322163f98",
+      "targetType": "User",
+      "_id": "9282a2b13186938223c2ecde",
+      "createdAt": "2026-10-31T18:45:19.082Z"
+    },
+    {
+      "actorId": "660000000000000000000005",
+      "actorRole": "pharmacy",
+      "action": "DISPENSE_PRESCRIPTION",
+      "details": "Prescription dispensed to patient Eleanor Rigby",
+      "targetId": "0c0f3a1fb73089bb68dab73c",
+      "targetType": "Prescription",
+      "_id": "ee9ca17fa078c67517fca78a",
+      "createdAt": "2026-10-31T18:39:02.707Z"
+    },
+    {
+      "actorId": "660000000000000000000003",
+      "actorRole": "doctor",
+      "action": "CREATE_PRESCRIPTION",
+      "details": "Prescription created for patient Eleanor Rigby",
+      "targetId": "0c0f3a1fb73089bb68dab73c",
+      "targetType": "Prescription",
+      "_id": "b0a83733a6438b1982ef4bb7",
+      "createdAt": "2026-10-31T18:39:02.700Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "LINK_PATIENT_DOCTOR",
+      "details": "Linked patient Eleanor Rigby to Dr. Dr. Sarah Connor. Notification sent.",
+      "targetId": "660000000000000000000004",
+      "targetType": "User",
+      "_id": "3567bdfd8e5367cbb174957c",
+      "createdAt": "2026-10-31T18:39:02.695Z"
+    },
+    {
+      "actorId": "660000000000000000000002",
+      "actorRole": "hospital",
+      "action": "CREATE_DOCTOR",
+      "details": "Created doctor: Dr. Sarah Connor (dr.specialist.1793471942585@lumina.sys) in Neurology",
+      "targetId": "b1b667ef9cda1e0d8ecb2c30",
+      "targetType": "User",
+      "_id": "ddef1d980a1d14c22444f96c",
+      "createdAt": "2026-10-31T18:39:02.690Z"
+    },
+    {
+      "actorId": "660000000000000000000005",
+      "actorRole": "pharmacy",
+      "action": "DISPENSE_PRESCRIPTION",
+      "details": "Prescription dispensed to patient Eleanor Rigby",
+      "targetId": "a7f3bcf132a3bfe2e1808ed3",
+      "targetType": "Prescription",
+      "_id": "b434026bea6717a3b17f8bbd",
+      "createdAt": "2026-10-31T18:33:32.315Z"
+    },
+    {
+      "actorId": "660000000000000000000003",
+      "actorRole": "doctor",
+      "action": "CREATE_PRESCRIPTION",
+      "details": "Prescription created for patient Eleanor Rigby",
+      "targetId": "a7f3bcf132a3bfe2e1808ed3",
+      "targetType": "Prescription",
+      "_id": "2f09a562e4aea5285523ddf8",
+      "createdAt": "2026-10-31T18:33:32.309Z"
+    },
+    {
+      "_id": "660000000000000000000030",
+      "actorId": "660000000000000000000001",
+      "actorRole": "admin",
+      "action": "SYSTEM_INITIALIZE",
+      "details": "MediSync Mock Security & Data Engine initialized",
+      "createdAt": "2026-10-31T17:32:27.740Z"
+    }
+  ],
+  "notifications": [
+    {
+      "userId": "d9dfdd3baf69f7dd099288a6",
+      "message": "You have been assigned to Dr. Marcus Vance (Cardiology). Visit Room 304, Floor 3.",
+      "type": "doctor_assignment",
+      "_id": "fe59bb9f2aa04e31bcf41166",
+      "createdAt": "2026-11-01T06:17:25.945Z",
+      "isRead": true
+    },
+    {
+      "userId": "660000000000000000000004",
+      "message": "You have been assigned to Dr. Sarah Connor (Neurology). Visit Room 405, Floor 4.",
+      "type": "doctor_assignment",
+      "_id": "686bb007fd31e077983ff1e0",
+      "createdAt": "2026-10-31T18:45:19.089Z"
+    },
+    {
+      "userId": "660000000000000000000004",
+      "message": "You have been assigned to Dr. Sarah Connor (Neurology). Visit Room 405, Floor 4.",
+      "type": "doctor_assignment",
+      "_id": "09f7fa570653557f48b14fe7",
+      "createdAt": "2026-10-31T18:39:02.694Z"
+    },
+    {
+      "_id": "660000000000000000000020",
+      "userId": "660000000000000000000001",
+      "message": "Welcome to MediSync Platform.",
+      "isRead": false,
+      "createdAt": "2026-10-31T17:32:27.740Z"
+    }
+  ]
+}
