@@ -210,7 +210,7 @@ const AdminDashboard = () => {
                                     <button
                                         key={tab.id}
                                         onClick={() => setActiveTab(tab.id)}
-                                        className={`relative flex items-center gap-3 px-8 py-4 rounded-2xl text-xs font-black uppercase tracking-widest transition-all ${activeTab === tab.id
+                                        className={`relative flex items-center gap-2 sm:gap-3 px-4 sm:px-8 py-2.5 sm:py-4 rounded-2xl text-xs font-black uppercase tracking-widest transition-all ${activeTab === tab.id
                                             ? 'bg-white text-brand shadow-sm border border-slate-100'
                                             : 'text-slate-400 hover:text-slate-600'
                                             }`}

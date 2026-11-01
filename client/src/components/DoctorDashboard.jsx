@@ -518,8 +518,14 @@ const DoctorDashboard = () => {
                                 </div>
                             )}
 
+                            {/* Mobile Swipe Hint */}
+                            <div className="md:hidden px-6 py-2 bg-slate-50 dark:bg-slate-800/40 border-b border-slate-100 dark:border-slate-800 text-[10px] font-bold text-slate-400 flex items-center justify-between">
+                                <span>Swipe table horizontally</span>
+                                <span className="text-brand font-black">Scroll →</span>
+                            </div>
+
                             {/* Prescriptions Table with proper spacing and visibility */}
-                            <div className="overflow-x-auto">
+                            <div className="overflow-x-auto custom-scrollbar touch-pan-x">
                                 <table className="w-full text-left border-collapse min-w-[700px]">
                                     <thead className="bg-slate-50/70 dark:bg-slate-800/60 text-[10px] font-black uppercase text-slate-400 dark:text-slate-400 tracking-[0.2em] border-b border-slate-100 dark:border-slate-800">
                                         <tr>

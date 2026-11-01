@@ -268,9 +268,9 @@ const PharmacyDashboard = () => {
                     {/* Audit Modal (Condensed) */}
                     <AnimatePresence>
                         {selectedPrescription && (
-                            <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 text-slate-800">
+                            <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 text-slate-800">
                                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-slate-950/40 backdrop-blur-xl" onClick={() => setSelectedPrescription(null)} />
-                                <motion.div initial={{ scale: 0.9, opacity: 0, y: 30 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.9, opacity: 0, y: 30 }} className="w-full max-w-4xl bg-white rounded-[2.5rem] shadow-2xl overflow-hidden relative z-10 border border-white/50">
+                                <motion.div initial={{ scale: 0.9, opacity: 0, y: 30 }} animate={{ scale: 1, opacity: 1, y: 0 }} exit={{ scale: 0.9, opacity: 0, y: 30 }} className="w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl relative z-10 border border-white/50 custom-scrollbar">
                                     <div className="p-10">
                                         <div className="flex items-center justify-between mb-10">
                                             <div className="flex items-center gap-6">

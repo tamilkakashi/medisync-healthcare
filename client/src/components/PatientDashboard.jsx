@@ -175,7 +175,7 @@ const PatientDashboard = () => {
             <div className="dashboard-pattern" />
             <div className="relative z-10 w-full">
                 <DashboardTopBar />
-                <div className="space-y-16 px-6 lg:px-12 py-10 max-w-[1400px] mx-auto">
+                <div className="space-y-8 sm:space-y-16 px-4 sm:px-6 lg:px-12 py-6 sm:py-10 max-w-[1400px] mx-auto">
                     {/* Header Section */}
                     <header className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 border-b border-slate-100 pb-12">
                         <div className="space-y-6">
@@ -211,7 +211,7 @@ const PatientDashboard = () => {
                                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                            className="absolute right-0 mt-4 w-80 bg-white rounded-[2rem] shadow-mega border border-slate-100 z-50 overflow-hidden"
+                                            className="absolute right-0 mt-4 w-72 sm:w-80 bg-white dark:bg-slate-900 rounded-[2rem] shadow-mega border border-slate-100 dark:border-slate-800 z-50 overflow-hidden"
                                         >
                                             <div className="p-6 border-b border-slate-50 bg-slate-50/50">
                                                 <h4 className="text-xs font-black text-slate-900 uppercase tracking-widest italic">Notifications</h4>

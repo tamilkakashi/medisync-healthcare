@@ -51,7 +51,7 @@ export default function Register() {
     ];
 
     return (
-        <div className="min-h-screen w-full bg-secondary relative overflow-x-hidden flex flex-col items-center justify-center py-24 px-6 font-sans">
+        <div className="min-h-screen w-full bg-secondary relative overflow-x-hidden flex flex-col items-center justify-center py-10 sm:py-20 px-4 sm:px-6 font-sans">
             {/* Background elements */}
             <div className="absolute inset-0 pointer-events-none z-0">
                 <div className="absolute inset-0 bg-medical-pattern pointer-events-none" />
@@ -85,7 +85,7 @@ export default function Register() {
                         transition={{ duration: 0.8, cubicBezier: [0.16, 1, 0.3, 1] }}
                         className="relative z-10 w-full max-w-5xl"
                     >
-                        <div className="bg-white/80 backdrop-blur-3xl rounded-[4rem] p-12 md:p-16 shadow-mega border border-white overflow-hidden relative">
+                        <div className="bg-white/90 dark:bg-slate-900/90 backdrop-blur-3xl rounded-[2.5rem] sm:rounded-[3.5rem] md:rounded-[4rem] p-6 sm:p-10 md:p-16 shadow-mega border border-white/80 dark:border-slate-800 overflow-hidden relative">
                             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-primary" />
 
                             <header className="mb-16 flex flex-col items-center text-center">
@@ -117,14 +117,14 @@ export default function Register() {
                                                 whileTap={{ scale: 0.98 }}
                                                 onClick={() => setFormData({ ...formData, role: role.id })}
                                                 className={cn(
-                                                    "p-8 rounded-[2.5rem] border-2 transition-all duration-500 flex flex-col items-center gap-6 relative overflow-hidden group",
+                                                    "p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-[2.5rem] border-2 transition-all duration-500 flex flex-col items-center gap-6 relative overflow-hidden group",
                                                     formData.role === role.id
                                                         ? `${role.border} bg-white shadow-soft ring-4 ring-primary/5`
                                                         : "border-slate-50 bg-slate-50/50 hover:bg-white hover:border-slate-100"
                                                 )}
                                             >
                                                 <div className={cn(
-                                                    "w-20 h-20 rounded-3xl flex items-center justify-center transition-all duration-500",
+                                                    "w-14 h-14 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl flex items-center justify-center transition-all duration-500",
                                                     formData.role === role.id ? `${role.bg} ${role.color} scale-110 shadow-inner` : "bg-white text-slate-300 group-hover:text-slate-600"
                                                 )}>
                                                     <role.icon size={32} />

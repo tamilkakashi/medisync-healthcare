@@ -66,8 +66,18 @@
     @apply border-slate-200;
   }
 
+  html {
+    max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
   body {
     @apply bg-medical-bg dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased font-sans selection:bg-primary/20 selection:text-primary-dark transition-colors duration-300;
+    max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* 4K Typography Scaling Base */

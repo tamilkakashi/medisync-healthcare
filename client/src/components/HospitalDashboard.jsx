@@ -330,6 +330,32 @@ const HospitalDashboard = () => {
                                 transition={{ duration: 0.3 }}
                                 className="max-w-7xl mx-auto space-y-12"
                             >
+                                {/* Mobile / Tablet Horizontal Module Navigation */}
+                                <div className="xl:hidden w-full overflow-x-auto pb-2 -mt-2 mb-6 custom-scrollbar">
+                                    <div className="flex items-center gap-2 min-w-max p-1.5 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm">
+                                        {navItems.map((item) => {
+                                            const isActive = activeTab === item.id;
+                                            const Icon = item.icon;
+                                            return (
+                                                <button
+                                                    key={item.id}
+                                                    type="button"
+                                                    onClick={() => setActiveTab(item.id)}
+                                                    className={cn(
+                                                        "flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs transition-all whitespace-nowrap cursor-pointer touch-manipulation",
+                                                        isActive
+                                                            ? "bg-brand text-white shadow-md shadow-brand/25"
+                                                            : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                                    )}
+                                                >
+                                                    <Icon size={16} className={isActive ? "text-white" : "text-slate-400"} />
+                                                    <span>{item.label}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+
                                 {/* Section Header */}
                                 <header className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
                                     <div>
